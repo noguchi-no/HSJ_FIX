@@ -50,6 +50,8 @@ public class StageManager : MonoBehaviour
     [SerializeField]
     private GameObject WarpGate;
 
+    public CanvasGroup hintButton;
+
     private void Awake()
     {
         StageClearText = GameObject.Find("StageClear");
@@ -96,6 +98,9 @@ public class StageManager : MonoBehaviour
                 stage1 = true;
                 break;
         }
+
+        hintButton.DOFade(0.0f, 1f).SetEase(Ease.InCubic).SetLoops(-1, LoopType.Yoyo);
+
     }
     private void startAnime()
     {

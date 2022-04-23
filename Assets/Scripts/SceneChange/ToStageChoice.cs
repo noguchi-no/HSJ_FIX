@@ -3,12 +3,17 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using DG.Tweening;
+using UnityEngine.SceneManagement;
 
 public class ToStageChoice : MonoBehaviour
 {
     public Image leftBackGround;
     public Image rightBackGround;
-    public Text titleText;
+    public Text titleText1;
+    public Text titleText2;
+    public Text titleText3;
+    public Text BulletPointTitleText;
+
     public float moveLength;
     public float duration;
     public Ease easeType;
@@ -16,22 +21,32 @@ public class ToStageChoice : MonoBehaviour
     public float jumpDuration;
     public float jumpPower;
 
+    Tween a;
     public RectTransform panelRectTransform;
     
     // Start is called before the first frame update
     void Start()
     {
-        
+        a = this.gameObject.GetComponent<Image>().DOFade(0.0f, duration).SetEase(Ease.InCubic).SetLoops(-1, LoopType.Yoyo);
     }
 
     public void OnClick (){
-        
+        a.Kill();
         var sequence = DOTween.Sequence();
         sequence.Append(leftBackGround.rectTransform.DOLocalMoveX(-moveLength, duration));
         sequence.Join(rightBackGround.rectTransform.DOLocalMoveX(moveLength, duration));
-        sequence.Join(titleText.DOFade(0f,duration));
+        sequence.Join(this.gameObject.GetComponent<Image>().DOFade(1f,0f));
+        sequence.Join(titleText1.DOFade(0f,duration));
+        sequence.Join(titleText2.DOFade(0f, duration));
+        sequence.Join(titleText3.DOFade(0f, duration));
+        sequence.Join(BulletPointTitleText.DOFade(0f, duration));
         sequence.Join(this.gameObject.transform.DOLocalJump(jumpDestination, jumpPower, 3, jumpDuration).SetEase(Ease.Linear));
-        sequence.Append(panelRectTransform.DOLocalMoveX(0f, 1f).SetEase(easeType));
+        sequence.AppendInterval(1f);
+        sequence.OnComplete(() =>
+        {
+            SceneManager.LoadScene("StageChoice");
+        });
+        //sequence.Append(panelRectTransform.DOLocalMoveX(0f, 1f).SetEase(easeType));
         
         // .OnComplete(() =>
         // {
