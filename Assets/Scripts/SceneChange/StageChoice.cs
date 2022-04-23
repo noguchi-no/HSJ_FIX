@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using DG.Tweening;
 
 public class StageChoice : MonoBehaviour
 {
@@ -12,6 +13,8 @@ public class StageChoice : MonoBehaviour
     */
     private int stageNum;
     public Button[] stageButtons;
+    public RectTransform panelRectTransform;
+    public Ease easeType;
     //public int stageMaxNum = 50;
     void Start()
     {
@@ -25,6 +28,8 @@ public class StageChoice : MonoBehaviour
             //ボタンを押せるようにする
             stageButtons[i].interactable = true;
         }
+
+        panelRectTransform.DOLocalMoveX(0f, 1f).SetEase(easeType);
     }
     private void CantTapButton()
     {
