@@ -7,7 +7,7 @@ using UnityEngine.UI;
 public class StageManager : MonoBehaviour
 {
     #region
-    private enum Stage
+    public enum Stage
     {
         stage1,
         stage2,
@@ -34,28 +34,48 @@ public class StageManager : MonoBehaviour
         stage23,
         stage24,
         stage25,
+        stage26,
+        stage27,
+        stage28,
+        stage29,
+        stage30,
+        stage31,
+        stage32,
+        stage33,
+        stage34,
+        stage35,
+        stage36,
+        stage37,
+        stage38,
+        stage39,
+        stage40,
     }
     #endregion
     [SerializeField]
-    private Stage nowStage;
-    private Text TitleText;
-    private Text SubTitleText;
+    public Stage nowStage;//現在のステージ
+    private Text TitleText;//メインタイトルのテキスト
+    private Text SubTitleText;//サブタイトルのテキスト
     private GameObject Player;
     private Player_Physics PlayerCs;
-    private GameObject StageClearText;
+    private GameObject StageClearText1;
+    private GameObject StageClearText2;
     [SerializeField]
-    private SceneObject nextScene;
+    private SceneObject nextScene;//ゴール後に行く次にステージ
     [SerializeField]
-    private int nowStageNum;
+    private int nowStageNum;//現在のステージの番号
     [SerializeField]
     private GameObject WarpGate;
+    public bool useHint = false;//ヒントの使用の有無
+    static int playNum;//連続プレイ回数
 
     public CanvasGroup hintButton;
 
     private void Awake()
     {
-        StageClearText = GameObject.Find("StageClear");
-        StageClearText.SetActive(false);
+        StageClearText1 = GameObject.Find("StageClear1");
+        StageClearText1.SetActive(false);
+        StageClearText2 = GameObject.Find("StageClear2");
+        StageClearText2.SetActive(false);
     }
     #region
     static bool stage1 = false;
@@ -83,9 +103,25 @@ public class StageManager : MonoBehaviour
     static bool stage23 = false;
     static bool stage24 = false;
     static bool stage25 = false;
+    static bool stage26 = false;
+    static bool stage27 = false;
+    static bool stage28 = false;
+    static bool stage29 = false;
+    static bool stage30 = false;
+    static bool stage31 = false;
+    static bool stage32 = false;
+    static bool stage33 = false;
+    static bool stage34 = false;
+    static bool stage35 = false;
+    static bool stage36 = false;
+    static bool stage37 = false;
+    static bool stage38 = false;
+    static bool stage39 = false;
+    static bool stage40 = false;
     #endregion
     void Start()
     {
+        playNum++;
         TitleText = GameObject.Find("TitleText").GetComponent<Text>();
         SubTitleText = GameObject.Find("SubTitleText").GetComponent<Text>();
         PlayerCs = FindObjectOfType<Player_Physics>().GetComponent<Player_Physics>();
@@ -97,13 +133,225 @@ public class StageManager : MonoBehaviour
                 startAnime();
                 stage1 = true;
                 break;
+            #region
+            case Stage.stage2:
+                if (stage2) break;
+                startAnime();
+                stage2 = true;
+                break;
+            case Stage.stage3:
+                if (stage3) break;
+                startAnime();
+                stage3 = true;
+                break;
+            case Stage.stage4:
+                if (stage4) break;
+                startAnime();
+                stage4 = true;
+                break;
+            case Stage.stage5:
+                if (stage5) break;
+                startAnime();
+                stage5 = true;
+                break;
+            case Stage.stage6:
+                if (stage6) break;
+                startAnime();
+                stage6 = true;
+                break;
+            case Stage.stage7:
+                if (stage7) break;
+                startAnime();
+                stage7 = true;
+                break;
+            case Stage.stage8:
+                if (stage8) break;
+                startAnime();
+                stage8 = true;
+                break;
+            case Stage.stage9:
+                if (stage9) break;
+                startAnime();
+                stage9 = true;
+                break;
+            case Stage.stage10:
+                if (stage10) break;
+                startAnime();
+                stage10 = true;
+                break;
+            case Stage.stage11:
+                if (stage11) break;
+                startAnime();
+                stage11 = true;
+                break;
+            case Stage.stage12:
+                if (stage12) break;
+                startAnime();
+                stage12 = true;
+                break;
+            case Stage.stage13:
+                if (stage13) break;
+                startAnime();
+                stage13 = true;
+                break;
+            case Stage.stage14:
+                if (stage14) break;
+                startAnime();
+                stage14 = true;
+                break;
+            case Stage.stage15:
+                if (stage15) break;
+                startAnime();
+                stage15 = true;
+                break;
+            case Stage.stage16:
+                if (stage16) break;
+                startAnime();
+                stage16 = true;
+                break;
+            case Stage.stage17:
+                if (stage17) break;
+                startAnime();
+                stage17 = true;
+                break;
+            case Stage.stage18:
+                if (stage18) break;
+                startAnime();
+                stage18 = true;
+                break;
+            case Stage.stage19:
+                if (stage19) break;
+                startAnime();
+                stage19 = true;
+                break;
+            case Stage.stage20:
+                if (stage20) break;
+                startAnime();
+                stage20 = true;
+                break;
+            case Stage.stage21:
+                if (stage21) break;
+                startAnime();
+                stage21 = true;
+                break;
+            case Stage.stage22:
+                if (stage22) break;
+                startAnime();
+                stage22 = true;
+                break;
+            case Stage.stage23:
+                if (stage23) break;
+                startAnime();
+                stage23 = true;
+                break;
+            case Stage.stage24:
+                if (stage24) break;
+                startAnime();
+                stage24 = true;
+                break;
+            case Stage.stage25:
+                if (stage25) break;
+                startAnime();
+                stage25 = true;
+                break;
+            case Stage.stage26:
+                if (stage26) break;
+                startAnime();
+                stage26 = true;
+                break;
+            case Stage.stage27:
+                if (stage27) break;
+                startAnime();
+                stage27 = true;
+                break;
+            case Stage.stage28:
+                if (stage28) break;
+                startAnime();
+                stage28 = true;
+                break;
+            case Stage.stage29:
+                if (stage29) break;
+                startAnime();
+                stage29 = true;
+                break;
+            case Stage.stage30:
+                if (stage30) break;
+                startAnime();
+                stage30 = true;
+                break;
+            case Stage.stage31:
+                if (stage31) break;
+                startAnime();
+                stage31 = true;
+                break;
+            case Stage.stage32:
+                if (stage32) break;
+                startAnime();
+                stage32 = true;
+                break;
+            case Stage.stage33:
+                if (stage33) break;
+                startAnime();
+                stage33 = true;
+                break;
+            case Stage.stage34:
+                if (stage34) break;
+                startAnime();
+                stage34 = true;
+                break;
+            case Stage.stage35:
+                if (stage35) break;
+                startAnime();
+                stage35 = true;
+                break;
+            case Stage.stage36:
+                if (stage36) break;
+                startAnime();
+                stage36 = true;
+                break;
+            case Stage.stage37:
+                if (stage37) break;
+                startAnime();
+                stage37 = true;
+                break;
+            case Stage.stage38:
+                if (stage38) break;
+                startAnime();
+                stage38 = true;
+                break;
+            case Stage.stage39:
+                if (stage39) break;
+                startAnime();
+                stage39 = true;
+                break;
+            case Stage.stage40:
+                if (stage40) break;
+                startAnime();
+                stage40 = true;
+                break;
+                #endregion
+        }
+        var hint = GameObject.Find("HintButton");
+        if (playNum > 7)
+        {
+            hint.SetActive(true);
+        }
+        else
+        {
+            hint.SetActive(false);
         }
 
         hintButton.DOFade(0.0f, 1f).SetEase(Ease.InCubic).SetLoops(-1, LoopType.Yoyo);
 
     }
+
+    public void usedHint()//ヒントを使った場合
+    {
+        useHint = true;
+    }
     private void startAnime()
     {
+
         TitleText.DOFade(1.0f, 1.5f).SetEase(Ease.InOutQuint).SetLoops(2, LoopType.Yoyo);
         SubTitleText.DOFade(1.0f, 1.5f).SetEase(Ease.InOutQuint).SetLoops(2, LoopType.Yoyo);
         if (PlayerCs != null) PlayerCs.titleCallPowerWait();
@@ -112,8 +360,10 @@ public class StageManager : MonoBehaviour
 
     public void stageClear()
     {
-        StageClearText.SetActive(true);
-        StartCoroutine("SceneChange");
+        playNum = 0;
+        if(useHint) StageClearText2.SetActive(true);
+        else if(!useHint) StageClearText1.SetActive(true);
+        StartCoroutine(SceneChange());
     }
 
     IEnumerator SceneChange()
@@ -123,13 +373,14 @@ public class StageManager : MonoBehaviour
             PlayerPrefs.SetInt("stageNum", nowStageNum);
             PlayerPrefs.Save();
         }
-        yield return new WaitForSeconds(3f);
+        yield return new WaitForSeconds(2f);
 
         FadeManager.Instance.LoadScene(nextScene, 0f);
     }
 
     IEnumerator PlayerWarpStart()
     {
+        WarpGate.SetActive(true);
         var color = Player.GetComponent<SpriteRenderer>();
         color.color = new Color(0, 0, 0, 0);
         yield return new WaitForSeconds(1f);
