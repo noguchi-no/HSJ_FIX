@@ -20,8 +20,6 @@ public class Goal : MonoBehaviour
         GoalCircle.transform.DOScale(new Vector3(0.35f, 0.35f, 0.35f), 1.2f).SetLoops(-1, LoopType.Yoyo).SetEase(Ease.InOutSine);
         Se = FindObjectOfType<SystemAudioManager>();
         StageManager = FindObjectOfType<StageManager>();
-        if (Se == null) Debug.LogError("Sesystem����������Ă��܂���");
-        if (StageManager == null) Debug.LogError("StageManager����������Ă��܂���");
     }
 
     void OnTriggerEnter2D(Collider2D other)

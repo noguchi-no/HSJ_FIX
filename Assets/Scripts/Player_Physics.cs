@@ -19,6 +19,7 @@ public class Player_Physics : MonoBehaviour
     public static bool end2nd = false;
 
     bool isEnd = false;
+    public bool isSet = true;
 
     Vector2 startPos;
     Vector2 endPos;
@@ -93,10 +94,10 @@ public class Player_Physics : MonoBehaviour
                 }
                 else shotPower = power;
             }
-            else if (Input.GetMouseButtonUp(0))
+            else if (Input.GetMouseButtonUp(0) && shotPower > 10)
             {
                 isHold = false;
-
+                isSet = false;
                 if (!TitleCall)
                 {
                     isShot = true;
