@@ -52,23 +52,27 @@ public class StageManager : MonoBehaviour
     }
     #endregion
     [SerializeField]
-    public Stage nowStage;//Œ»İ‚ÌƒXƒe[ƒW
-    private Text TitleText;//ƒƒCƒ“ƒ^ƒCƒgƒ‹‚ÌƒeƒLƒXƒg
-    private Text SubTitleText;//ƒTƒuƒ^ƒCƒgƒ‹‚ÌƒeƒLƒXƒg
+    public Stage nowStage;//ï¿½ï¿½ï¿½İ‚ÌƒXï¿½eï¿½[ï¿½W
+    private Text TitleText;//ï¿½ï¿½ï¿½Cï¿½ï¿½ï¿½^ï¿½Cï¿½gï¿½ï¿½ï¿½Ìƒeï¿½Lï¿½Xï¿½g
+    private Text SubTitleText;//ï¿½Tï¿½uï¿½^ï¿½Cï¿½gï¿½ï¿½ï¿½Ìƒeï¿½Lï¿½Xï¿½g
     private GameObject Player;
     private Player_Physics PlayerCs;
     private GameObject StageClearText1;
     private GameObject StageClearText2;
     [SerializeField]
-    private SceneObject nextScene;//ƒS[ƒ‹Œã‚És‚­Ÿ‚ÉƒXƒe[ƒW
+    private SceneObject nextScene;//ï¿½Sï¿½[ï¿½ï¿½ï¿½ï¿½Ésï¿½ï¿½ï¿½ï¿½ï¿½ÉƒXï¿½eï¿½[ï¿½W
     [SerializeField]
-    private int nowStageNum;//Œ»İ‚ÌƒXƒe[ƒW‚Ì”Ô†
+    private int nowStageNum;//ï¿½ï¿½ï¿½İ‚ÌƒXï¿½eï¿½[ï¿½Wï¿½Ì”Ôï¿½
     [SerializeField]
     private GameObject WarpGate;
-    public bool useHint = false;//ƒqƒ“ƒg‚Ìg—p‚Ì—L–³
-    static int playNum;//˜A‘±ƒvƒŒƒC‰ñ”
+    static public bool useHint = false;//ï¿½qï¿½ï¿½ï¿½gï¿½Ìgï¿½pï¿½Ì—Lï¿½ï¿½
+    static int playNum;//ï¿½Aï¿½ï¿½ï¿½vï¿½ï¿½ï¿½Cï¿½ï¿½
 
     public CanvasGroup hintButton;
+
+    public AudioClip startSound;
+    public AudioClip clearNoHintSound;
+    AudioSource audioSource;
 
     private void Awake()
     {
@@ -76,6 +80,8 @@ public class StageManager : MonoBehaviour
         StageClearText1.SetActive(false);
         StageClearText2 = GameObject.Find("StageClear2");
         StageClearText2.SetActive(false);
+
+        useHint = false;
     }
     #region
     static bool stage1 = false;
@@ -121,6 +127,7 @@ public class StageManager : MonoBehaviour
     #endregion
     void Start()
     {
+        audioSource = GetComponent<AudioSource>();
         playNum++;
         TitleText = GameObject.Find("TitleText").GetComponent<Text>();
         SubTitleText = GameObject.Find("SubTitleText").GetComponent<Text>();
@@ -345,24 +352,31 @@ public class StageManager : MonoBehaviour
 
     }
 
-    public void usedHint()//ƒqƒ“ƒg‚ğg‚Á‚½ê‡
+    public void usedHint()//ï¿½qï¿½ï¿½ï¿½gï¿½ï¿½ï¿½gï¿½ï¿½ï¿½ï¿½ï¿½ê‡
     {
         useHint = true;
     }
     private void startAnime()
     {
 
-        TitleText.DOFade(1.0f, 1.5f).SetEase(Ease.InOutQuint).SetLoops(2, LoopType.Yoyo);
-        SubTitleText.DOFade(1.0f, 1.5f).SetEase(Ease.InOutQuint).SetLoops(2, LoopType.Yoyo);
+        TitleText.DOFade(1.0f, 1.3f).SetEase(Ease.InOutQuint).SetLoops(2, LoopType.Yoyo);
+        SubTitleText.DOFade(1.0f, 1.3f).SetEase(Ease.InOutQuint).SetLoops(2, LoopType.Yoyo);
+        
         if (PlayerCs != null) PlayerCs.titleCallPowerWait();
         if (WarpGate != null) StartCoroutine(PlayerWarpStart());
+
+        DOVirtual.DelayedCall (1f, ()=> audioSource.PlayOneShot(startSound)); 
     }
 
     public void stageClear()
     {
         playNum = 0;
         if(useHint) StageClearText2.SetActive(true);
-        else if(!useHint) StageClearText1.SetActive(true);
+        else if(!useHint) 
+        {
+            StageClearText1.SetActive(true);
+            audioSource.PlayOneShot(clearNoHintSound);
+        }
         StartCoroutine(SceneChange());
     }
 

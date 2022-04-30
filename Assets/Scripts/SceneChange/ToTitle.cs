@@ -11,7 +11,7 @@ public class ToTitle : MonoBehaviour
     }
 
     public void OnClick (){
-        FadeManager.Instance.LoadScene ("Title", 0.3f);
+        FadeManager.Instance.LoadScene ("StageChoice", 0.3f);
     }
     // Update is called once per frame
     void Update()
