@@ -396,10 +396,10 @@ public class StageManager : MonoBehaviour
 
     IEnumerator PlayerWarpStart()
     {
-        WarpGate.SetActive(true);
         var color = Player.GetComponent<SpriteRenderer>();
         color.color = new Color(0, 0, 0, 0);
         yield return new WaitForSeconds(1f);
+        WarpGate.SetActive(true);
         WarpGate.transform.position = Player.transform.position;
         WarpGate.transform.DOScale(new Vector3(0.7f, 0.7f, 0.7f), 1.0f);
         WarpGate.transform.DORotate(new Vector3(0f, 0f, -360f), 1.0f, RotateMode.FastBeyond360).SetEase(Ease.Linear);
