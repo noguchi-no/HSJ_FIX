@@ -5,6 +5,6 @@ public class CompleteAnime : MonoBehaviour
 {
     private void Start()
     {
-        transform.DOScaleX(1f, 2f);
+        transform.DOScaleX(1f, 0.7f);
     }
 }

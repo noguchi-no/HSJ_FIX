@@ -52,21 +52,23 @@ public class StageManager : MonoBehaviour
     }
     #endregion
     [SerializeField]
-    public Stage nowStage;//���݂̃X�e�[�W
-    private Text TitleText;//���C���^�C�g���̃e�L�X�g
-    private Text SubTitleText;//�T�u�^�C�g���̃e�L�X�g
+    public Stage nowStage;
+    private Text TitleText;
+    private Text SubTitleText;
     private GameObject Player;
     private Player_Physics PlayerCs;
     private GameObject StageClearText1;
     private GameObject StageClearText2;
     [SerializeField]
-    private SceneObject nextScene;//�S�[����ɍs�����ɃX�e�[�W
+    private SceneObject nextScene;
     [SerializeField]
-    private int nowStageNum;//���݂̃X�e�[�W�̔ԍ�
+    private int nowStageNum;
     [SerializeField]
     private GameObject WarpGate;
-    static public bool useHint = false;//�q���g�̎g�p�̗L��
-    static int playNum;//�A���v���C��
+    static public bool useHint = false;
+    static int playNum;
+
+    private Tweener fade;
 
     public CanvasGroup hintButton;
 
@@ -348,11 +350,11 @@ public class StageManager : MonoBehaviour
             hint.SetActive(false);
         }
 
-        hintButton.DOFade(0.0f, 1f).SetEase(Ease.InCubic).SetLoops(-1, LoopType.Yoyo);
+        fade = hintButton.DOFade(0.0f, 1f).SetEase(Ease.InCubic).SetLoops(-1, LoopType.Yoyo);
 
     }
 
-    public void usedHint()//�q���g���g�����ꍇ
+    public void usedHint()
     {
         useHint = true;
     }
@@ -407,6 +409,11 @@ public class StageManager : MonoBehaviour
         WarpGate.transform.DORotate(new Vector3(0f, 0f, -360f), 1.0f, RotateMode.FastBeyond360).SetEase(Ease.Linear);
         yield return new WaitForSeconds(0.9f);
         WarpGate.SetActive(false);
+    }
+
+    public void stopFade()
+    {
+        fade.Kill();
     }
 
 }

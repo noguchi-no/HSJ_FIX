@@ -17,16 +17,24 @@ public class Arrow : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-
         float power = player_Physics.shotPower / 100.0f;
+
+        Debug.Log(power);
         /*
         if (player_Physics.power > 500)
         {
             power = 5;
         }
         */
-        transform.localScale = new Vector3(power, 1.0f, 1.0f);
-        transform.rotation = Quaternion.AngleAxis(player_Physics.angle, new Vector3(0, 0, 1));
+        if(power >= 0.5f)
+        {
+            transform.localScale = new Vector3(power, 1.0f, 1.0f);
+            transform.rotation = Quaternion.AngleAxis(player_Physics.angle, new Vector3(0, 0, 1));
+        }
+        else
+        {
+            transform.localScale = new Vector3(0, 0, 0);
+        }
         //transform.localScale = new Vector3(player.power/100.0f, 1.0f, 1.0f);
         //transform.rotation = Quaternion.AngleAxis(player.angle, new Vector3(0, 0, 1));
     }
