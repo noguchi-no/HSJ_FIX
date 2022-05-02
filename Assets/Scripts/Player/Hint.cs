@@ -7,20 +7,21 @@ public class Hint : MonoBehaviour
 {
     StageManager manager;
     Player_Physics Player;
-    Color C;
+    HintAnime anime;
     void Start()
     {
         manager = FindObjectOfType<StageManager>().GetComponent<StageManager>();
         Player = GetComponentInParent<Player_Physics>();
-        C = GetComponent<SpriteRenderer>().color;
-        GetComponent<SpriteRenderer>().color = new Color(0, 0, 0, 0);
+        anime = GetComponent<HintAnime>();
+        anime.setAcive(false);
+
     }
 
     private void FixedUpdate()
     {
         if(!Player.isSet)
         {
-            GetComponent<SpriteRenderer>().color = new Color(0, 0, 0, 0);
+            anime.setAcive(false);
         }
     }
 
@@ -104,13 +105,13 @@ public class Hint : MonoBehaviour
                 gameObject.transform.rotation = Quaternion.Euler(0, 0, 150);
                 break;
             case StageManager.Stage.stage26:
-                gameObject.transform.rotation = Quaternion.Euler(0, 0, 150);
+                gameObject.transform.rotation = Quaternion.Euler(0, 0, 260);
                 break;
             case StageManager.Stage.stage27:
                 gameObject.transform.rotation = Quaternion.Euler(0, 0, 235);
                 break;
             case StageManager.Stage.stage28:
-                gameObject.transform.rotation = Quaternion.Euler(0, 0, 0);
+                gameObject.transform.rotation = Quaternion.Euler(0, 0, 220);
                 break;
             case StageManager.Stage.stage29:
                 gameObject.transform.rotation = Quaternion.Euler(0, 0, 180);
@@ -150,6 +151,7 @@ public class Hint : MonoBehaviour
                 break;
 
         }
-        GetComponent<SpriteRenderer>().color = C;
+
+        anime.setAcive(true);
     }
 }
