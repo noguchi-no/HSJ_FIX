@@ -12,7 +12,7 @@ public class Goal : MonoBehaviour
     StageManager StageManager;
     private GameObject GoalCircle;
     private GameObject PlayerObj;
-   
+    
     private void Start()
     {
         GoalCircle = GameObject.Find("GoalCircle");
@@ -58,8 +58,11 @@ public class Goal : MonoBehaviour
         color.color = new Color(0, 0, 0, 0);
         Destroy(this.gameObject);
         StageManager.stageClear();
-        switch (Se.type)
+
+        if(StageManager.useHint)
         {
+            switch (Se.type)
+            {
             case SystemAudioManager.SEtype.metal:
                 PlayBoundSe(AudioType.MGoal);
                 break;
@@ -75,7 +78,9 @@ public class Goal : MonoBehaviour
             case SystemAudioManager.SEtype.normal:
                 PlayBoundSe(AudioType.Goal);
                 break;
+            }
         }
+
     }
 
 }

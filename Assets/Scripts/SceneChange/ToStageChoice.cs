@@ -27,11 +27,11 @@ public class ToStageChoice : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        a = this.gameObject.GetComponent<Image>().DOFade(0.0f, duration).SetEase(Ease.InCubic).SetLoops(-1, LoopType.Yoyo);
+        //a = this.gameObject.GetComponent<Image>().DOFade(0.0f, duration).SetEase(Ease.InCubic).SetLoops(-1, LoopType.Yoyo);
     }
 
     public void OnClick (){
-        a.Kill();
+        //a.Kill();
         var sequence = DOTween.Sequence();
         sequence.Append(leftBackGround.rectTransform.DOLocalMoveX(-moveLength, duration));
         sequence.Join(rightBackGround.rectTransform.DOLocalMoveX(moveLength, duration));
@@ -41,7 +41,7 @@ public class ToStageChoice : MonoBehaviour
         sequence.Join(titleText3.DOFade(0f, duration));
         sequence.Join(BulletPointTitleText.DOFade(0f, duration));
         sequence.Join(this.gameObject.transform.DOLocalJump(jumpDestination, jumpPower, 3, jumpDuration).SetEase(Ease.Linear));
-        sequence.AppendInterval(1f);
+        //sequence.AppendInterval(1f);
         sequence.OnComplete(() =>
         {
             SceneManager.LoadScene("StageChoice");
