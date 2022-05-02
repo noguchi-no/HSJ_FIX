@@ -17,8 +17,9 @@ public class ToStage : MonoBehaviour
 
         Debug.Log(stageNum);
 
-        stageName = "Stage" + stageNum;
-    
+        stageName = "Stage " + stageNum;
+
+
         FadeManager.Instance.LoadScene(stageName, 0.3f);
     }
 

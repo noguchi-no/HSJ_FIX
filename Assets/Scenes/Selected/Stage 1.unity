@@ -1121,7 +1121,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 2423626564609125972, guid: 2cff7c3e3bc80854d95ced73189d5b51, type: 3}
       propertyPath: animeType
-      value: 4
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 2423626564609125973, guid: 2cff7c3e3bc80854d95ced73189d5b51, type: 3}
       propertyPath: m_RootOrder
