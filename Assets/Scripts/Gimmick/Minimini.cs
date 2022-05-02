@@ -46,6 +46,8 @@ public class Minimini : MonoBehaviour
             audioSource.PlayOneShot(miniSound);
             other.gameObject.transform.localScale = new Vector3(0.1f, 0.1f,1.0f);
             
+            Destroy(this.gameObject);
+
             //DOVirtual.DelayedCall (0.2f, ()=> Destroy(this.gameObject));
         }  
     }

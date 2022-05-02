@@ -356,7 +356,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_Sprite: {fileID: -2413806693520163455, guid: ebe73ca9363db456bacf42c025bb4847, type: 3}
-  m_Color: {r: 1, g: 0, b: 0, a: 0.49019608}
+  m_Color: {r: 0.6431373, g: 0.6431373, b: 0.6431373, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -1456,6 +1456,7 @@ MonoBehaviour:
   angle: 0
   power: 0
   shotPower: 0
+  isSet: 1
   physicsMaterial2D: {fileID: 6200000, guid: 537d2fc48707b3a46b59d4262a753599, type: 2}
   physicsMaterial2D2: {fileID: 6200000, guid: 4ce73c0b54944fb4f96f2084314683bf, type: 2}
   isHold: 0
@@ -2325,6 +2326,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c39cd97b2d6a2914d934fd87e13c9811, type: 3}
+--- !u!1 &1408909722 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7939301056621198002, guid: 0f173a945f4365c44b4315ae67375504, type: 3}
+  m_PrefabInstance: {fileID: 3302413695189997174}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1475877590
 GameObject:
   m_ObjectHideFlags: 0
@@ -2670,6 +2676,11 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1767064192 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7939301057923349757, guid: 0f173a945f4365c44b4315ae67375504, type: 3}
+  m_PrefabInstance: {fileID: 3302413695189997174}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1956075288
 GameObject:
   m_ObjectHideFlags: 0
@@ -2880,5 +2891,13 @@ PrefabInstance:
       propertyPath: m_Name
       value: Minimini
       objectReference: {fileID: 0}
+    - target: {fileID: 3302413695116839867, guid: 0f173a945f4365c44b4315ae67375504, type: 3}
+      propertyPath: leftArrow
+      value: 
+      objectReference: {fileID: 1408909722}
+    - target: {fileID: 3302413695116839867, guid: 0f173a945f4365c44b4315ae67375504, type: 3}
+      propertyPath: rightArrow
+      value: 
+      objectReference: {fileID: 1767064192}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0f173a945f4365c44b4315ae67375504, type: 3}
