@@ -27,6 +27,14 @@ public class ToStageChoice : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        if(Screen.width > 2100)
+        {
+            jumpDestination = new Vector2(1600,160);
+        }
+        if(Screen.width < 1400)
+        {
+            jumpDestination = new Vector2(900,100);
+        }
         //a = this.gameObject.GetComponent<Image>().DOFade(0.0f, duration).SetEase(Ease.InCubic).SetLoops(-1, LoopType.Yoyo);
     }
 

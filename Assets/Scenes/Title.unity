@@ -1329,7 +1329,7 @@ MonoBehaviour:
   duration: 1
   easeType: 21
   jumpDestination: {x: 1300, y: 150}
-  jumpDuration: 2
+  jumpDuration: 1.7
   jumpPower: 300
   panelRectTransform: {fileID: 0}
 --- !u!114 &2033985829
