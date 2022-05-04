@@ -2818,7 +2818,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   CheckPos: {fileID: 3739421550810696459}
   arrow: {fileID: 7773232072752282291}
-  moveLength: 1.2
+  moveLength: 2.25
   duration: 1.5
   easeType: 27
 --- !u!1 &1684180337

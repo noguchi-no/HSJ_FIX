@@ -2305,7 +2305,11 @@ PrefabInstance:
       objectReference: {fileID: 1480069124}
     - target: {fileID: 3345948159606948539, guid: 6c2aee5e0d3989b44b63c6dcf0828d2c, type: 3}
       propertyPath: moveVec.x
-      value: 1
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 3345948159606948539, guid: 6c2aee5e0d3989b44b63c6dcf0828d2c, type: 3}
+      propertyPath: moveVec.y
+      value: 1.21
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6c2aee5e0d3989b44b63c6dcf0828d2c, type: 3}
@@ -2548,7 +2552,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3490924578210613695, guid: a91fdfc7c70244f2db204cdfb99e08ed, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0
+      value: -3
       objectReference: {fileID: 0}
     - target: {fileID: 3490924578210613695, guid: a91fdfc7c70244f2db204cdfb99e08ed, type: 3}
       propertyPath: m_LocalPosition.y

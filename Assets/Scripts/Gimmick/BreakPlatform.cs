@@ -5,7 +5,7 @@ using DG.Tweening;
 
 public class BreakPlatform : MonoBehaviour
 {
-    public static bool broken;
+    public bool broken;
     public GameObject effect;
     // public AudioClip breakSound;
     // AudioSource audioSource;
