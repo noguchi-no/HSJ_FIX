@@ -8,7 +8,7 @@ public class Hint : MonoBehaviour
     StageManager manager;
     Player_Physics Player;
     HintAnime anime;
-    void Start()
+    void Awake()
     {
         manager = FindObjectOfType<StageManager>().GetComponent<StageManager>();
         Player = GetComponentInParent<Player_Physics>();

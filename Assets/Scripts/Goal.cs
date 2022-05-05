@@ -24,7 +24,7 @@ public class Goal : MonoBehaviour
 
     void OnTriggerEnter2D(Collider2D other)
     {
-        if (other.gameObject.name == "Player")
+        if (other.gameObject.tag == "Player")
         {
             PlayerObj = other.gameObject;
             PlayerObj.GetComponent<Rigidbody2D>().velocity = Vector2.zero;
