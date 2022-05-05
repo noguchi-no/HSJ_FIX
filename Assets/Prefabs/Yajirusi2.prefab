@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2423626564609125973}
   - component: {fileID: 2423626564609125972}
+  - component: {fileID: 2010286250}
   m_Layer: 0
   m_Name: Yajirusi2
   m_TagString: Untagged
@@ -24,7 +25,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2423626564609125974}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 3.333333, y: 3.333333, z: 3.333333}
   m_Children:
@@ -58,7 +59,19 @@ MonoBehaviour:
   - {fileID: 2423626565624259713}
   - {fileID: 2423626565775361175}
   - {fileID: 2423626566671062117}
-  animeType: 4
+  isAnime: 0
+--- !u!114 &2010286250
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2423626564609125974}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f7b499932f6f3704dabc2d02cd0dae29, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &2423626565344292449
 GameObject:
   m_ObjectHideFlags: 0
@@ -459,7 +472,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: 45f657d798060964bb9cb0dc067555df, type: 3}
-  m_Color: {r: 0.449906, g: 0.8392157, b: 0.2352941, a: 1}
+  m_Color: {r: 0.449906, g: 0.8392157, b: 0.2352941, a: 0}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0

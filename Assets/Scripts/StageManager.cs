@@ -65,7 +65,7 @@ public class StageManager : MonoBehaviour
     private int nowStageNum;
     [SerializeField]
     private GameObject WarpGate;
-    static public bool useHint = false;
+    static public bool useHint;
     static int playNum;
 
     private Tweener fade;
@@ -75,6 +75,8 @@ public class StageManager : MonoBehaviour
     public AudioClip startSound;
     public AudioClip clearNoHintSound;
     AudioSource audioSource;
+    [SerializeField]
+    private bool resetClear = false;
 
     private void Awake()
     {
@@ -83,7 +85,6 @@ public class StageManager : MonoBehaviour
         StageClearText2 = GameObject.Find("StageClear2");
         StageClearText2.SetActive(false);
 
-        useHint = false;
     }
     #region
     static bool stage1 = false;
@@ -351,7 +352,12 @@ public class StageManager : MonoBehaviour
         }
 
         fade = hintButton.DOFade(0.0f, 1f).SetEase(Ease.InCubic).SetLoops(-1, LoopType.Yoyo);
+        if(resetClear) PlayerPrefs.SetInt("stageNum", 1);
 
+        if(useHint)
+        {
+            FindObjectOfType<Hint>().GetComponent<Hint>().onHint();
+        }
     }
 
     public void usedHint()
@@ -373,20 +379,27 @@ public class StageManager : MonoBehaviour
     public void stageClear()
     {
         playNum = 0;
-        if(useHint) StageClearText2.SetActive(true);
-        else if(!useHint) 
+        if (useHint)
         {
+            StageClearText2.SetActive(true);
+            PlayerPrefs.SetInt(nowStage.ToString(), 1);
+        }
+        else if (!useHint)
+        {
+            PlayerPrefs.SetInt(nowStage.ToString(), 2);
             StageClearText1.SetActive(true);
             audioSource.PlayOneShot(clearNoHintSound);
         }
+        PlayerPrefs.Save();
+        useHint = false;
         StartCoroutine(SceneChange());
     }
 
     IEnumerator SceneChange()
     {
-        if(PlayerPrefs.GetInt("stageNum") < nowStageNum)
+        if(PlayerPrefs.GetInt("stageNum") <= nowStageNum)
         {
-            PlayerPrefs.SetInt("stageNum", nowStageNum);
+            PlayerPrefs.SetInt("stageNum", nowStageNum + 1);
             PlayerPrefs.Save();
         }
         yield return new WaitForSeconds(2f);
