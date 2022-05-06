@@ -3086,6 +3086,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: StageManager
       objectReference: {fileID: 0}
+    - target: {fileID: 6282854969545174005, guid: c39cd97b2d6a2914d934fd87e13c9811, type: 3}
+      propertyPath: m_Text
+      value: "\u30D7\u30C3\u30B7\u30E5&\u30B3\u30ED\u30B3\u30ED"
+      objectReference: {fileID: 0}
+    - target: {fileID: 6282854970204650525, guid: c39cd97b2d6a2914d934fd87e13c9811, type: 3}
+      propertyPath: m_Text
+      value: STAGE18
+      objectReference: {fileID: 0}
     - target: {fileID: 9003925250182712249, guid: c39cd97b2d6a2914d934fd87e13c9811, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 

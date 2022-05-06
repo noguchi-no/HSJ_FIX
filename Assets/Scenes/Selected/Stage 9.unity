@@ -412,6 +412,18 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 164397490, guid: c39cd97b2d6a2914d934fd87e13c9811, type: 3}
+      propertyPath: m_Color.b
+      value: 0.7830189
+      objectReference: {fileID: 0}
+    - target: {fileID: 164397490, guid: c39cd97b2d6a2914d934fd87e13c9811, type: 3}
+      propertyPath: m_Color.g
+      value: 0.7830189
+      objectReference: {fileID: 0}
+    - target: {fileID: 164397490, guid: c39cd97b2d6a2914d934fd87e13c9811, type: 3}
+      propertyPath: m_Color.r
+      value: 0.7830189
+      objectReference: {fileID: 0}
     - target: {fileID: 1681542212, guid: c39cd97b2d6a2914d934fd87e13c9811, type: 3}
       propertyPath: m_LocalScale.x
       value: 0.1
@@ -491,6 +503,14 @@ PrefabInstance:
     - target: {fileID: 6282854969499502479, guid: c39cd97b2d6a2914d934fd87e13c9811, type: 3}
       propertyPath: m_Name
       value: StageManager
+      objectReference: {fileID: 0}
+    - target: {fileID: 6282854969545174005, guid: c39cd97b2d6a2914d934fd87e13c9811, type: 3}
+      propertyPath: m_Text
+      value: "\u30A6\u30A3\u30F3\u30C9\u30B5\u30FC\u30D5\u30A3\u30F3"
+      objectReference: {fileID: 0}
+    - target: {fileID: 6282854970204650525, guid: c39cd97b2d6a2914d934fd87e13c9811, type: 3}
+      propertyPath: m_Text
+      value: STAGE9
       objectReference: {fileID: 0}
     - target: {fileID: 9003925250182712249, guid: c39cd97b2d6a2914d934fd87e13c9811, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target

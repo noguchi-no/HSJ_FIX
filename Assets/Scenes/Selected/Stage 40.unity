@@ -805,6 +805,10 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 4549465764978789415, guid: d279f47a5c4d849ec9fc26283d0c0e4b, type: 3}
+      propertyPath: m_SortingOrder
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4549465764978789592, guid: d279f47a5c4d849ec9fc26283d0c0e4b, type: 3}
       propertyPath: m_RootOrder
       value: 44
@@ -1262,6 +1266,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: BreakPlatForm (3)
       objectReference: {fileID: 0}
+    - target: {fileID: 4549465764978789415, guid: d279f47a5c4d849ec9fc26283d0c0e4b, type: 3}
+      propertyPath: m_SortingOrder
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4549465764978789592, guid: d279f47a5c4d849ec9fc26283d0c0e4b, type: 3}
       propertyPath: m_RootOrder
       value: 42
@@ -1630,6 +1638,14 @@ PrefabInstance:
     - target: {fileID: 6282854969499502479, guid: c39cd97b2d6a2914d934fd87e13c9811, type: 3}
       propertyPath: m_Name
       value: StageManager
+      objectReference: {fileID: 0}
+    - target: {fileID: 6282854969545174005, guid: c39cd97b2d6a2914d934fd87e13c9811, type: 3}
+      propertyPath: m_Text
+      value: "\u30E9\u30B9\u30C8\u30C0\u30F3\u30B8\u30E7\u30F3"
+      objectReference: {fileID: 0}
+    - target: {fileID: 6282854970204650525, guid: c39cd97b2d6a2914d934fd87e13c9811, type: 3}
+      propertyPath: m_Text
+      value: STAGE40
       objectReference: {fileID: 0}
     - target: {fileID: 9003925250182712249, guid: c39cd97b2d6a2914d934fd87e13c9811, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
@@ -4166,6 +4182,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4549465764978789413, guid: d279f47a5c4d849ec9fc26283d0c0e4b, type: 3}
       propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4549465764978789415, guid: d279f47a5c4d849ec9fc26283d0c0e4b, type: 3}
+      propertyPath: m_SortingOrder
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4549465764978789592, guid: d279f47a5c4d849ec9fc26283d0c0e4b, type: 3}
