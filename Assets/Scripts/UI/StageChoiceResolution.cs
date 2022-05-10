@@ -7,6 +7,7 @@ public class StageChoiceResolution : MonoBehaviour
 {
     public RectTransform contentRect;
     //1334/1920=0.69
+    public float contentRectNumberUnder1800 = 0.8f;
     public float contentRectNumberUnder1400 = 0.6f;
     public float contentRectNumberUnder1000 = 0.4f;
     //public float smallSellSize;
@@ -33,6 +34,17 @@ public class StageChoiceResolution : MonoBehaviour
             // content.sizeDelta = sd;
             contentRect.localScale = new Vector3(contentRectNumberUnder1400,contentRectNumberUnder1400,1);
             contentRect.localPosition = new Vector3(contentRect.localPosition.x * contentRectNumberUnder1400, contentRect.position.y * contentRectNumberUnder1400, 1);
+        }
+        else if(Screen.width < 1800)
+        {
+            // GridLayoutGroup grid = GetComponent<GridLayoutGroup> ();
+            // grid.cellSize = new Vector2 (smallSellSize, smallSellSize);
+            // Vector2 sd = content.sizeDelta;
+            // Debug.Log(sd);
+            // sd = sd / 2;
+            // content.sizeDelta = sd;
+            contentRect.localScale = new Vector3(contentRectNumberUnder1800,contentRectNumberUnder1800,1);
+            contentRect.localPosition = new Vector3(contentRect.localPosition.x * contentRectNumberUnder1800, contentRect.position.y * contentRectNumberUnder1800, 1);
         }
         
     }
