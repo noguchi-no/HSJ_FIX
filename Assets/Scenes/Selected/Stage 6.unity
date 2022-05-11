@@ -1853,6 +1853,10 @@ PrefabInstance:
       propertyPath: nowStageNum
       value: 6
       objectReference: {fileID: 0}
+    - target: {fileID: 6282854969499502478, guid: c39cd97b2d6a2914d934fd87e13c9811, type: 3}
+      propertyPath: nextScene.m_SceneName
+      value: Stage 7
+      objectReference: {fileID: 0}
     - target: {fileID: 6282854969499502479, guid: c39cd97b2d6a2914d934fd87e13c9811, type: 3}
       propertyPath: m_Name
       value: StageManager
