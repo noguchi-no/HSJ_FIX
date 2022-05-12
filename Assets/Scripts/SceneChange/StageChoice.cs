@@ -18,7 +18,7 @@ public class StageChoice : MonoBehaviour
     //public int stageMaxNum = 50;
     void Start()
     {
-        CantTapButton();
+        //CantTapButton();
 
         stageNum = PlayerPrefs.GetInt("stageNum", 1);
 

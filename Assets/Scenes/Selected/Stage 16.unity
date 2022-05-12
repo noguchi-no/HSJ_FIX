@@ -1299,6 +1299,11 @@ Transform:
   m_Father: {fileID: 792804152}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &776974626 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7939301057923349757, guid: 0f173a945f4365c44b4315ae67375504, type: 3}
+  m_PrefabInstance: {fileID: 1557488339}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &792804150
 GameObject:
   m_ObjectHideFlags: 0
@@ -1851,6 +1856,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: Minimini
       objectReference: {fileID: 0}
+    - target: {fileID: 3302413695116839867, guid: 0f173a945f4365c44b4315ae67375504, type: 3}
+      propertyPath: leftArrow
+      value: 
+      objectReference: {fileID: 1909251880}
+    - target: {fileID: 3302413695116839867, guid: 0f173a945f4365c44b4315ae67375504, type: 3}
+      propertyPath: rightArrow
+      value: 
+      objectReference: {fileID: 776974626}
     - target: {fileID: 7939301056621198004, guid: 0f173a945f4365c44b4315ae67375504, type: 3}
       propertyPath: m_SortingOrder
       value: 1
@@ -3130,6 +3143,11 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!1 &1909251880 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7939301056621198002, guid: 0f173a945f4365c44b4315ae67375504, type: 3}
+  m_PrefabInstance: {fileID: 1557488339}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1911365819
 GameObject:
   m_ObjectHideFlags: 0
