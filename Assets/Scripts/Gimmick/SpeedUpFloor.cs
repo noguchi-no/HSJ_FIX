@@ -43,7 +43,7 @@ public class SpeedUpFloor : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D other) {
 
-        if(other.gameObject.CompareTag("Player") || other.gameObject.CompareTag("Ball"))
+        if(other.gameObject.CompareTag("Player"))
         {
             audioSource.PlayOneShot(speedUpSound);
             rb = player.GetComponent<Rigidbody2D>();
