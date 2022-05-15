@@ -470,6 +470,8 @@ MonoBehaviour:
   hintButton: {fileID: 1025811185}
   startSound: {fileID: 8300000, guid: af2783a29c6754734b7e29f71059f996, type: 3}
   clearNoHintSound: {fileID: 8300000, guid: bbcf987fe9d8f49af9a07b873f44091e, type: 3}
+  HintSound: {fileID: 8300000, guid: 02a4dc95c0426467096d749a632d969a, type: 3}
+  resetClear: 0
 --- !u!82 &547811541
 AudioSource:
   m_ObjectHideFlags: 0
