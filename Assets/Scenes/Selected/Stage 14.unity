@@ -356,7 +356,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_Sprite: {fileID: -2413806693520163455, guid: ebe73ca9363db456bacf42c025bb4847, type: 3}
-  m_Color: {r: 1, g: 0, b: 0, a: 0.49019608}
+  m_Color: {r: 0.6431373, g: 0.6431373, b: 0.6431373, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -741,7 +741,7 @@ GameObject:
   m_Component:
   - component: {fileID: 218326921}
   - component: {fileID: 218326920}
-  m_Layer: 5
+  m_Layer: 9
   m_Name: RightVibration
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2085,7 +2085,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1414468685}
   - component: {fileID: 1414468684}
-  m_Layer: 9
+  m_Layer: 8
   m_Name: Collider4akdm
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2457,7 +2457,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2020871458}
   - component: {fileID: 2020871459}
-  m_Layer: 5
+  m_Layer: 9
   m_Name: LeftVibration
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2849,7 +2849,7 @@ GameObject:
   - component: {fileID: 4622282293165789926}
   - component: {fileID: 4622282293165789930}
   - component: {fileID: 1432371813}
-  m_Layer: 8
+  m_Layer: 9
   m_Name: TaoreruWall
   m_TagString: Wall
   m_Icon: {fileID: 0}

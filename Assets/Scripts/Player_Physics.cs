@@ -75,6 +75,8 @@ public class Player_Physics : MonoBehaviour
                 isHold = true;
                 Vector2 tempVec = new Vector2(startPos.x - Input.mousePosition.x, startPos.y - Input.mousePosition.y);
 
+                tempVec *= 2.0f;
+
                 if (!TitleCall)
                 {
                     power = tempVec.magnitude;
@@ -101,7 +103,7 @@ public class Player_Physics : MonoBehaviour
                 if (!TitleCall)
                 {
                     isShot = true;
-                    //transform.GetChild(0).gameObject.SetActive(false);
+                    transform.GetChild(0).gameObject.SetActive(false);
 
                     endPos = new Vector2(Input.mousePosition.x, Input.mousePosition.y);
 
