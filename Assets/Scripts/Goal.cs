@@ -3,7 +3,6 @@ using System.Collections.Generic;
 using Systems.Audio;
 using UnityEngine;
 using DG.Tweening;
-using UnityEngine.SceneManagement;
 using AudioType = Systems.Audio.AudioType;
 
 public class Goal : MonoBehaviour
@@ -29,8 +28,9 @@ public class Goal : MonoBehaviour
             PlayerObj = other.gameObject;
             PlayerObj.GetComponent<Rigidbody2D>().velocity = Vector2.zero;
             PlayerObj.GetComponent<Rigidbody2D>().simulated = false;
-            Debug.Log(PlayerObj);
-            
+            PlayerObj.GetComponent<CircleCollider2D>().enabled = false;
+
+
             StartCoroutine(Goalanimation());
         }
     }
@@ -44,11 +44,14 @@ public class Goal : MonoBehaviour
     {
         Debug.Log("goalAnime");
         var dis = Vector3.Distance(PlayerObj.transform.position, transform.position);
+        Debug.Log("distance = "+dis);
         var PlayerPos = (PlayerObj.transform.position - transform.position).normalized;
+        PlayerObj.transform.localScale = new Vector3(0.35f, 0.35f, 0.35f);
+        PlayerObj.transform.DOScale(new Vector3(0.15f, 0.15f, 0.15f), 2f);
         for (int i = 0; i < 90; i++)
         {
             float temp = 1f * i * 4 / 360;
-            PlayerObj.transform.localScale = new Vector3(0.3f, 0.3f, 0.3f) * (1f - 1f* i / 90);
+            //PlayerObj.transform.localScale = new Vector3(0.3f, 0.3f, 0.3f) * (1f - 1f* i / 90);
             var GoalPlayerPos = new Vector3(PlayerPos.x * dis * (1f - temp) * Mathf.Sin(temp * 15), PlayerPos.x * dis * (1f - temp) * Mathf.Cos(temp * 15), 0) + transform.position;
             Debug.Log(Mathf.Sin(i * 4 / 360));
             PlayerObj.transform.position = GoalPlayerPos;
@@ -79,6 +82,7 @@ public class Goal : MonoBehaviour
                 PlayBoundSe(AudioType.Goal);
                 break;
             }
+            StageManager.useHint = false;
         }
 
     }

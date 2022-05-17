@@ -74,6 +74,8 @@ public class StageManager : MonoBehaviour
 
     public AudioClip startSound;
     public AudioClip clearNoHintSound;
+    [SerializeField]
+    public AudioClip HintSound;
     AudioSource audioSource;
     [SerializeField]
     private bool resetClear = false;
@@ -352,6 +354,8 @@ public class StageManager : MonoBehaviour
         }
 
         fade = hintButton.DOFade(0.0f, 1f).SetEase(Ease.InCubic).SetLoops(-1, LoopType.Yoyo);
+        if (useHint) stopFade();
+
         if(resetClear) PlayerPrefs.SetInt("stageNum", 1);
 
         if(useHint)
@@ -362,7 +366,11 @@ public class StageManager : MonoBehaviour
 
     public void usedHint()
     {
-        useHint = true;
+        if (!useHint)
+        {
+            audioSource.PlayOneShot(HintSound);
+            useHint = true;
+        }
     }
     private void startAnime()
     {
@@ -389,9 +397,9 @@ public class StageManager : MonoBehaviour
             PlayerPrefs.SetInt(nowStage.ToString(), 2);
             StageClearText1.SetActive(true);
             audioSource.PlayOneShot(clearNoHintSound);
+            useHint = false;
         }
         PlayerPrefs.Save();
-        useHint = false;
         StartCoroutine(SceneChange());
     }
 
