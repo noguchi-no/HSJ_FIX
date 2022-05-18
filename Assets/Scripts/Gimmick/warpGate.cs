@@ -11,7 +11,7 @@ public class warpGate : MonoBehaviour
     public GameObject iconOverTarget;
     Vector3 playerScale;
     public GameObject player;
-    public float duration = 0.3f;
+    float duration = 0.15f;
     //public float interval;
     Rigidbody2D rb;
     Vector3 playerVelocity;
