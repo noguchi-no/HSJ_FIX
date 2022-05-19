@@ -39,6 +39,7 @@ public class Player_Physics : MonoBehaviour
     [SerializeField]
     private bool Player2p = false;
     private GameObject Player2;
+    private GameObject lastBoundObject = null;
 
     void Start()
     {
@@ -163,16 +164,16 @@ public class Player_Physics : MonoBehaviour
         {
             Debug.Log(coll.gameObject);
 
-            var effect = Instantiate(BoundEffect, transform);
-            effect.transform.parent = null;
             if (!end1st)
             {
                 end1st = true;
                 Debug.Log("1回目のジャンプ");
 
                 rb.sharedMaterial = physicsMaterial2D;
+                var effect = Instantiate(BoundEffect, transform);
+                effect.transform.parent = null;
 
-                switch(Se.type)
+                switch (Se.type)
                 {
                     case SystemAudioManager.SEtype.metal:
                         PlayBoundSe(AudioType.MBound);
@@ -195,27 +196,32 @@ public class Player_Physics : MonoBehaviour
             else if (!end2nd)
             {
                 Debug.Log("2回目のジャンプ");
-
                 rb.sharedMaterial = physicsMaterial2D2;
-                switch (Se.type)
-                {
-                    case SystemAudioManager.SEtype.metal:
-                        PlayBoundSe(AudioType.MBound);
-                        break;
-                    case SystemAudioManager.SEtype.fantasy:
-                        PlayBoundSe(AudioType.FBound2);
-                        break;
-                    case SystemAudioManager.SEtype.wood:
-                        PlayBoundSe(AudioType.WBound3);
-                        break;
-                    case SystemAudioManager.SEtype.cyber:
-                        PlayBoundSe(AudioType.SBound3);
-                        break;
-                    case SystemAudioManager.SEtype.normal:
-                        PlayBoundSe(AudioType.Bound);
-                        break;
-                }
                 StartCoroutine(checkPos());
+                if (lastBoundObject != coll.gameObject)
+                {
+                    switch (Se.type)
+                    {
+                        case SystemAudioManager.SEtype.metal:
+                            PlayBoundSe(AudioType.MBound);
+                            break;
+                        case SystemAudioManager.SEtype.fantasy:
+                            PlayBoundSe(AudioType.FBound2);
+                            break;
+                        case SystemAudioManager.SEtype.wood:
+                            PlayBoundSe(AudioType.WBound3);
+                            break;
+                        case SystemAudioManager.SEtype.cyber:
+                            PlayBoundSe(AudioType.SBound3);
+                            break;
+                        case SystemAudioManager.SEtype.normal:
+                            PlayBoundSe(AudioType.Bound);
+                            break;
+                    }
+                    var effect = Instantiate(BoundEffect, transform);
+                    effect.transform.parent = null;
+                }
+                lastBoundObject = coll.gameObject;
             }
         }
     }

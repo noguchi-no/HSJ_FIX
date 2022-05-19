@@ -44,7 +44,7 @@ public class Minimini : MonoBehaviour
         if(other.gameObject.tag == "Player")
         {
             audioSource.PlayOneShot(miniSound);
-            other.gameObject.transform.localScale = new Vector3(0.1f, 0.1f,1.0f);
+            other.gameObject.transform.localScale = new Vector3(0.1f, 0.1f,0.1f);
             
             Destroy(this.gameObject);
 

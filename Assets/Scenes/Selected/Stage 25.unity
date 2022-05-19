@@ -317,11 +317,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6282854969499502478, guid: c39cd97b2d6a2914d934fd87e13c9811, type: 3}
       propertyPath: nowStage
-      value: 25
+      value: 24
       objectReference: {fileID: 0}
     - target: {fileID: 6282854969499502478, guid: c39cd97b2d6a2914d934fd87e13c9811, type: 3}
       propertyPath: nowStageNum
-      value: 26
+      value: 25
       objectReference: {fileID: 0}
     - target: {fileID: 6282854969499502478, guid: c39cd97b2d6a2914d934fd87e13c9811, type: 3}
       propertyPath: nextScene.m_SceneName
@@ -489,6 +489,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b5f9aa8b2340fca4e94d26a666ccec1a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  mini: 0
 --- !u!61 &195534116
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -513,7 +514,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1.8, y: 1.8}
+  m_Size: {x: 1.5, y: 1.5}
   m_EdgeRadius: 0
 --- !u!212 &195534117
 SpriteRenderer:
@@ -2625,7 +2626,6 @@ MonoBehaviour:
   iconOverWarpGate: {fileID: 2125402749}
   iconOverTarget: {fileID: 212725433}
   player: {fileID: 1658742105}
-  duration: 0.3
   enterSound: {fileID: 8300000, guid: 00f3ce89329ee4ceeba050787b20d70f, type: 3}
 --- !u!82 &954193214
 AudioSource:
@@ -3729,7 +3729,6 @@ MonoBehaviour:
   iconOverWarpGate: {fileID: 1688082739}
   iconOverTarget: {fileID: 1910054119}
   player: {fileID: 1658742105}
-  duration: 0.3
   enterSound: {fileID: 8300000, guid: 00f3ce89329ee4ceeba050787b20d70f, type: 3}
 --- !u!82 &1386636160
 AudioSource:
@@ -4435,6 +4434,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f7b499932f6f3704dabc2d02cd0dae29, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  dgree: 0
 --- !u!1 &1519608549
 GameObject:
   m_ObjectHideFlags: 0
@@ -4981,7 +4981,6 @@ MonoBehaviour:
   iconOverWarpGate: {fileID: 1549985308}
   iconOverTarget: {fileID: 1451584193}
   player: {fileID: 1658742105}
-  duration: 0.3
   enterSound: {fileID: 8300000, guid: 00f3ce89329ee4ceeba050787b20d70f, type: 3}
 --- !u!82 &1612694901
 AudioSource:
@@ -5693,7 +5692,6 @@ MonoBehaviour:
   iconOverWarpGate: {fileID: 1607257125}
   iconOverTarget: {fileID: 655067843}
   player: {fileID: 1658742105}
-  duration: 0.3
   enterSound: {fileID: 8300000, guid: 00f3ce89329ee4ceeba050787b20d70f, type: 3}
 --- !u!82 &1933676429
 AudioSource:
@@ -6493,7 +6491,6 @@ MonoBehaviour:
   iconOverWarpGate: {fileID: 1762414321268582810}
   iconOverTarget: {fileID: 6700109901829870176}
   player: {fileID: 1658742105}
-  duration: 0.3
   enterSound: {fileID: 8300000, guid: 00f3ce89329ee4ceeba050787b20d70f, type: 3}
 --- !u!4 &2709707876214532205
 Transform:
