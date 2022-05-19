@@ -40,6 +40,7 @@ public class Player_Physics : MonoBehaviour
     private bool Player2p = false;
     private GameObject Player2;
     private GameObject lastBoundObject = null;
+    public bool isCheck = true;
 
     void Start()
     {
@@ -235,6 +236,7 @@ public class Player_Physics : MonoBehaviour
     {
         while (true)
         {
+            if (!isCheck) break;
             var tempPos = transform.position;
             yield return new WaitForSeconds(1f);
             var dis = Vector3.Distance(transform.position, tempPos);

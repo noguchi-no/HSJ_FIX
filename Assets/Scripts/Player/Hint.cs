@@ -25,7 +25,7 @@ public class Hint : MonoBehaviour
         {
             anime.setAcive(false);
         }
-        gameObject.transform.rotation = Quaternion.Euler(0, 0, dgree);
+        //gameObject.transform.rotation = Quaternion.Euler(0, 0, dgree);
     }
 
     public void onHint()
@@ -96,7 +96,7 @@ public class Hint : MonoBehaviour
                 gameObject.transform.rotation = Quaternion.Euler(0, 0, 350);
                 break;
             case StageManager.Stage.stage22:
-                gameObject.transform.rotation = Quaternion.Euler(0, 0, 277);
+                gameObject.transform.rotation = Quaternion.Euler(0, 0, 272);
                 break;
             case StageManager.Stage.stage23:
                 gameObject.transform.rotation = Quaternion.Euler(0, 0, 190);
