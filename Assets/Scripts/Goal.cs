@@ -31,7 +31,10 @@ public class Goal : MonoBehaviour
             PlayerObj.GetComponent<Rigidbody2D>().velocity = Vector2.zero;
             PlayerObj.GetComponent<Rigidbody2D>().simulated = false;
             PlayerObj.GetComponent<CircleCollider2D>().enabled = false;
-
+            if (PlayerObj.TryGetComponent(out Player_Physics Physics))
+            {
+                Physics.isCheck = false;
+            }
 
             StartCoroutine(Goalanimation());
         }

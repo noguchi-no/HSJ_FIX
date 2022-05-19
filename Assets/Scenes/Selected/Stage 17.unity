@@ -686,7 +686,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7730475372717446377, guid: 7170038d863c347dc99113d9e64266bb, type: 3}
       propertyPath: m_LocalScale.y
-      value: 6
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 7730475372717446377, guid: 7170038d863c347dc99113d9e64266bb, type: 3}
       propertyPath: m_LocalPosition.x
@@ -694,7 +694,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7730475372717446377, guid: 7170038d863c347dc99113d9e64266bb, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 5
+      value: 3.5
       objectReference: {fileID: 0}
     - target: {fileID: 7730475372717446377, guid: 7170038d863c347dc99113d9e64266bb, type: 3}
       propertyPath: m_LocalPosition.z
@@ -1415,6 +1415,7 @@ MonoBehaviour:
   BoundEffect: {fileID: 5641106977153208954, guid: 04b4f42a2f950d5428ad6c303d5396d5, type: 3}
   BreakEffect: {fileID: 2125039830121078445, guid: f12cacbb60932814290a5e523f6efd0c, type: 3}
   Player2p: 0
+  isCheck: 1
 --- !u!58 &1295543359
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -1537,7 +1538,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7730475372717446377, guid: 7170038d863c347dc99113d9e64266bb, type: 3}
       propertyPath: m_LocalScale.y
-      value: 6
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 7730475372717446377, guid: 7170038d863c347dc99113d9e64266bb, type: 3}
       propertyPath: m_LocalPosition.x
@@ -1545,7 +1546,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7730475372717446377, guid: 7170038d863c347dc99113d9e64266bb, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 5
+      value: 3.5
       objectReference: {fileID: 0}
     - target: {fileID: 7730475372717446377, guid: 7170038d863c347dc99113d9e64266bb, type: 3}
       propertyPath: m_LocalPosition.z
@@ -1922,6 +1923,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b5f9aa8b2340fca4e94d26a666ccec1a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  mini: 0
 --- !u!61 &1743585982
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -1946,7 +1948,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1, y: 1.5}
+  m_Size: {x: 1, y: 1.3}
   m_EdgeRadius: 0
 --- !u!212 &1743585983
 SpriteRenderer:
