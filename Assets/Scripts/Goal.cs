@@ -11,6 +11,8 @@ public class Goal : MonoBehaviour
     StageManager StageManager;
     private GameObject GoalCircle;
     private GameObject PlayerObj;
+    [SerializeField]
+    private bool mini;
     
     private void Start()
     {
@@ -46,7 +48,16 @@ public class Goal : MonoBehaviour
         var dis = Vector3.Distance(PlayerObj.transform.position, transform.position);
         Debug.Log("distance = "+dis);
         var PlayerPos = (PlayerObj.transform.position - transform.position).normalized;
-        PlayerObj.transform.localScale = new Vector3(0.35f, 0.35f, 0.35f);
+        if(mini)
+        {
+            PlayerObj.transform.localScale = new Vector3(0.2f, 0.2f, 0.2f);
+            PlayerObj.transform.DOScale(new Vector3(0.1f, 0.1f, 0.1f), 2f);
+        }
+        else
+        {
+            PlayerObj.transform.localScale = new Vector3(0.35f, 0.35f, 0.35f);
+            PlayerObj.transform.DOScale(new Vector3(0.15f, 0.15f, 0.15f), 2f);
+        }
         PlayerObj.transform.DOScale(new Vector3(0.15f, 0.15f, 0.15f), 2f);
         for (int i = 0; i < 90; i++)
         {

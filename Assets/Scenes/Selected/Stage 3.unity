@@ -1996,7 +1996,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1.8, y: 1.8}
+  m_Size: {x: 1.5, y: 1.5}
   m_EdgeRadius: 0
 --- !u!212 &1924572536
 SpriteRenderer:
@@ -2057,7 +2057,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1924572533}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 4.74, y: 1.04, z: 0}
+  m_LocalPosition: {x: 6.32, y: 1.04, z: 0}
   m_LocalScale: {x: 2.7104, y: 2.7104, z: 2.7104}
   m_Children:
   - {fileID: 829560369}
@@ -2257,7 +2257,8 @@ PrefabInstance:
       propertyPath: m_Name
       value: Player
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 2700558838758968900, guid: 5d8b33becd7d2e4429934cfc1e90299b, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 5d8b33becd7d2e4429934cfc1e90299b, type: 3}
 --- !u!4 &2709707875447422038
 Transform:
@@ -2267,7 +2268,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1762414321591205281}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.48299992, y: -1.94, z: 0}
+  m_LocalPosition: {x: -0.9, y: -1.94, z: 0}
   m_LocalScale: {x: 0.09071333, y: 0.09071333, z: 0.045356665}
   m_Children: []
   m_Father: {fileID: 370049115678341939}
@@ -2561,7 +2562,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7314643505358896974}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.483, y: -2.7419, z: 0}
+  m_LocalPosition: {x: -0.90000033, y: -2.7419, z: 0}
   m_LocalScale: {x: 0.5, y: 0.5, z: 0.7387095}
   m_Children: []
   m_Father: {fileID: 370049115678341939}

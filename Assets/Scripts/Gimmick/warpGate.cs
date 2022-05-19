@@ -108,7 +108,7 @@ public class warpGate : MonoBehaviour
         }
         if (col.gameObject.CompareTag("Ball"))
         {
-            audioSource.PlayOneShot(enterSound);
+            //audioSource.PlayOneShot(enterSound);
             Destroy(col.gameObject,0.1f);
         }
 

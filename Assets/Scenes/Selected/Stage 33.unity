@@ -1806,6 +1806,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f7b499932f6f3704dabc2d02cd0dae29, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  dgree: 0
 --- !u!1001 &886512309
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2306,7 +2307,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1.8, y: 1.8}
+  m_Size: {x: 1.5, y: 1.5}
   m_EdgeRadius: 0
 --- !u!212 &998446013
 SpriteRenderer:

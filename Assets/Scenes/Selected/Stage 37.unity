@@ -850,6 +850,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f7b499932f6f3704dabc2d02cd0dae29, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  dgree: 0
 --- !u!1 &436668241
 GameObject:
   m_ObjectHideFlags: 0
@@ -2605,6 +2606,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b5f9aa8b2340fca4e94d26a666ccec1a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  mini: 1
 --- !u!61 &1296815478
 BoxCollider2D:
   m_ObjectHideFlags: 0
