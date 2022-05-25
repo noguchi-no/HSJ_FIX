@@ -32,6 +32,7 @@ namespace Systems.Audio
         public void ShotSe(AudioType audioType)
         {
             var se = seList.First(se => se.name == audioType.ToString());
+            Debug.Log(audioType + "‚ð‚È‚ç‚µ‚Ü‚µ‚½");
             seSource.PlayOneShot(se);
         }
     }
