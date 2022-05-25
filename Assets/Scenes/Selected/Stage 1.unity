@@ -306,6 +306,11 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
+--- !u!1 &202291040 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 9003925250182712255, guid: c39cd97b2d6a2914d934fd87e13c9811, type: 3}
+  m_PrefabInstance: {fileID: 547811538}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &240653826
 GameObject:
   m_ObjectHideFlags: 0
@@ -735,32 +740,24 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6282854969499502478, guid: c39cd97b2d6a2914d934fd87e13c9811, type: 3}
-      propertyPath: nowStage
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6282854969499502478, guid: c39cd97b2d6a2914d934fd87e13c9811, type: 3}
-      propertyPath: nowStageNum
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 6282854969499502478, guid: c39cd97b2d6a2914d934fd87e13c9811, type: 3}
-      propertyPath: nextScene.m_SceneName
-      value: Stage 2
-      objectReference: {fileID: 0}
+      propertyPath: hintObject
+      value: 
+      objectReference: {fileID: 202291040}
     - target: {fileID: 6282854969499502479, guid: c39cd97b2d6a2914d934fd87e13c9811, type: 3}
       propertyPath: m_Name
       value: StageManager
       objectReference: {fileID: 0}
-    - target: {fileID: 6282854969545174005, guid: c39cd97b2d6a2914d934fd87e13c9811, type: 3}
-      propertyPath: m_Text
-      value: "\u306F\u3058\u307E\u308A\u306E\u5730"
+    - target: {fileID: 9003925250182712249, guid: c39cd97b2d6a2914d934fd87e13c9811, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[2].m_Mode
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 9003925250182712249, guid: c39cd97b2d6a2914d934fd87e13c9811, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 694540121}
     - target: {fileID: 9003925250182712249, guid: c39cd97b2d6a2914d934fd87e13c9811, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: onHint
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[2].m_MethodName
+      value: 
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c39cd97b2d6a2914d934fd87e13c9811, type: 3}
@@ -2636,6 +2633,7 @@ MonoBehaviour:
   BoundEffect: {fileID: 5641106977153208954, guid: 04b4f42a2f950d5428ad6c303d5396d5, type: 3}
   BreakEffect: {fileID: 2125039830121078445, guid: f12cacbb60932814290a5e523f6efd0c, type: 3}
   Player2p: 0
+  isCheck: 1
 --- !u!58 &1897629868
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -2919,6 +2917,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b5f9aa8b2340fca4e94d26a666ccec1a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  mini: 0
 --- !u!61 &1965106847
 BoxCollider2D:
   m_ObjectHideFlags: 0
