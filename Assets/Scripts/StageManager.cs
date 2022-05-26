@@ -204,7 +204,7 @@ public class StageManager : MonoBehaviour
         WarpGate.transform.DOScale(new Vector3(0.7f, 0.7f, 0.7f), 1.0f);
         WarpGate.transform.DORotate(new Vector3(0f, 0f, -360f), 1.0f, RotateMode.FastBeyond360).SetEase(Ease.Linear);
         yield return new WaitForSeconds(1.0f);
-        color.color = new Color(0.2313726f, 0.2313726f, 0.2313726f, 1);
+        color.color = new Color(0.6235294f, 0.6235294f, 0.6235294f, 1);
         WarpGate.transform.DOScale(new Vector3(0.1f, 0.1f, 0.1f), 1.0f);
         WarpGate.transform.DORotate(new Vector3(0f, 0f, -360f), 1.0f, RotateMode.FastBeyond360).SetEase(Ease.Linear);
         yield return new WaitForSeconds(0.9f);
