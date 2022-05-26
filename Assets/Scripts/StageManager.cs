@@ -82,6 +82,8 @@ public class StageManager : MonoBehaviour
     [SerializeField]
     private bool resetClear = false;
 
+    private GameObject whitePaper;
+
     private void Awake()
     {
         StageClearText1 = GameObject.Find("StageClear1");
@@ -100,11 +102,14 @@ public class StageManager : MonoBehaviour
         SubTitleText = GameObject.Find("SubTitleText").GetComponent<Text>();
         PlayerCs = FindObjectOfType<Player_Physics>().GetComponent<Player_Physics>();
         Player = GameObject.Find("Player");
+        whitePaper = GameObject.FindGameObjectWithTag("white");
 
         if(!isStartAnime)
         {
             isStartAnime = true;
             startAnime();
+        } else {
+            whitePaper.SetActive(false);
         }
         var hint = GameObject.Find("HintButton");
         if (playNum > 7)
@@ -148,7 +153,9 @@ public class StageManager : MonoBehaviour
 
         TitleText.DOFade(1.0f, 1.3f).SetEase(Ease.InOutQuint).SetLoops(2, LoopType.Yoyo);
         SubTitleText.DOFade(1.0f, 1.3f).SetEase(Ease.InOutQuint).SetLoops(2, LoopType.Yoyo);
-        
+        whitePaper.GetComponent<RawImage>().DOFade(0.2f, 1.3f).SetEase(Ease.InOutQuint).SetLoops(2, LoopType.Yoyo);
+
+
         if (PlayerCs != null) PlayerCs.titleCallPowerWait();
         if (WarpGate != null) StartCoroutine(PlayerWarpStart());
 

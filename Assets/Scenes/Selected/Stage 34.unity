@@ -372,6 +372,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b5f9aa8b2340fca4e94d26a666ccec1a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  mini: 0
 --- !u!61 &355200309
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -650,9 +651,37 @@ PrefabInstance:
       propertyPath: m_Name
       value: Yajirusi2
       objectReference: {fileID: 0}
+    - target: {fileID: 2423626565344292479, guid: 2cff7c3e3bc80854d95ced73189d5b51, type: 3}
+      propertyPath: m_SortingOrder
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2423626565624259743, guid: 2cff7c3e3bc80854d95ced73189d5b51, type: 3}
+      propertyPath: m_SortingOrder
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2423626565775361173, guid: 2cff7c3e3bc80854d95ced73189d5b51, type: 3}
+      propertyPath: m_SortingOrder
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2423626565824749772, guid: 2cff7c3e3bc80854d95ced73189d5b51, type: 3}
+      propertyPath: m_SortingOrder
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 2423626566020460290, guid: 2cff7c3e3bc80854d95ced73189d5b51, type: 3}
       propertyPath: m_Color.a
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2423626566020460290, guid: 2cff7c3e3bc80854d95ced73189d5b51, type: 3}
+      propertyPath: m_SortingOrder
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2423626566144994684, guid: 2cff7c3e3bc80854d95ced73189d5b51, type: 3}
+      propertyPath: m_SortingOrder
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2423626566671062115, guid: 2cff7c3e3bc80854d95ced73189d5b51, type: 3}
+      propertyPath: m_SortingOrder
+      value: 2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2cff7c3e3bc80854d95ced73189d5b51, type: 3}
@@ -1846,9 +1875,45 @@ PrefabInstance:
       propertyPath: m_Text
       value: "\u58C1\u30C8\u30B2"
       objectReference: {fileID: 0}
+    - target: {fileID: 6282854969545174005, guid: c39cd97b2d6a2914d934fd87e13c9811, type: 3}
+      propertyPath: m_Color.b
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6282854969545174005, guid: c39cd97b2d6a2914d934fd87e13c9811, type: 3}
+      propertyPath: m_Color.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6282854969545174005, guid: c39cd97b2d6a2914d934fd87e13c9811, type: 3}
+      propertyPath: m_Color.r
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 6282854970204650525, guid: c39cd97b2d6a2914d934fd87e13c9811, type: 3}
       propertyPath: m_Text
       value: STAGE34
+      objectReference: {fileID: 0}
+    - target: {fileID: 6282854970204650525, guid: c39cd97b2d6a2914d934fd87e13c9811, type: 3}
+      propertyPath: m_Color.b
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6282854970204650525, guid: c39cd97b2d6a2914d934fd87e13c9811, type: 3}
+      propertyPath: m_Color.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6282854970204650525, guid: c39cd97b2d6a2914d934fd87e13c9811, type: 3}
+      propertyPath: m_Color.r
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6911003050006091708, guid: c39cd97b2d6a2914d934fd87e13c9811, type: 3}
+      propertyPath: m_Color.b
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6911003050006091708, guid: c39cd97b2d6a2914d934fd87e13c9811, type: 3}
+      propertyPath: m_Color.g
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6911003050006091708, guid: c39cd97b2d6a2914d934fd87e13c9811, type: 3}
+      propertyPath: m_Color.r
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 9003925250182712249, guid: c39cd97b2d6a2914d934fd87e13c9811, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
@@ -2357,6 +2422,7 @@ MonoBehaviour:
   BoundEffect: {fileID: 5641106977153208954, guid: 04b4f42a2f950d5428ad6c303d5396d5, type: 3}
   BreakEffect: {fileID: 2125039830121078445, guid: f12cacbb60932814290a5e523f6efd0c, type: 3}
   Player2p: 0
+  isCheck: 1
 --- !u!58 &1984592323
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -2435,7 +2501,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_Sprite: {fileID: -2413806693520163455, guid: ebe73ca9363db456bacf42c025bb4847, type: 3}
-  m_Color: {r: 0.23137255, g: 0.23137255, b: 0.23137255, a: 1}
+  m_Color: {r: 0.62352943, g: 0.62352943, b: 0.62352943, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0

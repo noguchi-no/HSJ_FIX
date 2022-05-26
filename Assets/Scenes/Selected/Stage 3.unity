@@ -1972,6 +1972,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b5f9aa8b2340fca4e94d26a666ccec1a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  mini: 0
 --- !u!61 &1924572535
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -2252,6 +2253,18 @@ PrefabInstance:
     - target: {fileID: 2700558839094162760, guid: 5d8b33becd7d2e4429934cfc1e90299b, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2700558839094162763, guid: 5d8b33becd7d2e4429934cfc1e90299b, type: 3}
+      propertyPath: m_Color.b
+      value: 0.62352943
+      objectReference: {fileID: 0}
+    - target: {fileID: 2700558839094162763, guid: 5d8b33becd7d2e4429934cfc1e90299b, type: 3}
+      propertyPath: m_Color.g
+      value: 0.62352943
+      objectReference: {fileID: 0}
+    - target: {fileID: 2700558839094162763, guid: 5d8b33becd7d2e4429934cfc1e90299b, type: 3}
+      propertyPath: m_Color.r
+      value: 0.62352943
       objectReference: {fileID: 0}
     - target: {fileID: 2700558839094162775, guid: 5d8b33becd7d2e4429934cfc1e90299b, type: 3}
       propertyPath: m_Name

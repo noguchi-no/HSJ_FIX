@@ -836,6 +836,7 @@ MonoBehaviour:
   BoundEffect: {fileID: 5641106977153208954, guid: 04b4f42a2f950d5428ad6c303d5396d5, type: 3}
   BreakEffect: {fileID: 2125039830121078445, guid: f12cacbb60932814290a5e523f6efd0c, type: 3}
   Player2p: 0
+  isCheck: 1
 --- !u!58 &314864028
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -914,7 +915,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_Sprite: {fileID: -2413806693520163455, guid: ebe73ca9363db456bacf42c025bb4847, type: 3}
-  m_Color: {r: 0.23137255, g: 0.23137255, b: 0.23137255, a: 1}
+  m_Color: {r: 0.62352943, g: 0.62352943, b: 0.62352943, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -2250,6 +2251,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b5f9aa8b2340fca4e94d26a666ccec1a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  mini: 0
 --- !u!61 &1729195093
 BoxCollider2D:
   m_ObjectHideFlags: 0

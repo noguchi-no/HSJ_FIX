@@ -4241,6 +4241,7 @@ MonoBehaviour:
   BoundEffect: {fileID: 5641106977153208954, guid: 04b4f42a2f950d5428ad6c303d5396d5, type: 3}
   BreakEffect: {fileID: 2125039830121078445, guid: f12cacbb60932814290a5e523f6efd0c, type: 3}
   Player2p: 1
+  isCheck: 1
 --- !u!58 &1948340446
 CircleCollider2D:
   m_ObjectHideFlags: 0

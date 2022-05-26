@@ -1468,6 +1468,7 @@ MonoBehaviour:
   BoundEffect: {fileID: 5641106977153208954, guid: 04b4f42a2f950d5428ad6c303d5396d5, type: 3}
   BreakEffect: {fileID: 2125039830121078445, guid: f12cacbb60932814290a5e523f6efd0c, type: 3}
   Player2p: 0
+  isCheck: 1
 --- !u!58 &481129654
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -1546,7 +1547,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_Sprite: {fileID: -2413806693520163455, guid: ebe73ca9363db456bacf42c025bb4847, type: 3}
-  m_Color: {r: 0.23137255, g: 0.23137255, b: 0.23137255, a: 1}
+  m_Color: {r: 0.62352943, g: 0.62352943, b: 0.62352943, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -3090,6 +3091,10 @@ PrefabInstance:
     - target: {fileID: 3302413695116839846, guid: 0f173a945f4365c44b4315ae67375504, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3302413695116839865, guid: 0f173a945f4365c44b4315ae67375504, type: 3}
+      propertyPath: m_Color.g
+      value: 0.48235294
       objectReference: {fileID: 0}
     - target: {fileID: 3302413695116839866, guid: 0f173a945f4365c44b4315ae67375504, type: 3}
       propertyPath: m_Name
