@@ -25,7 +25,7 @@ public class Hint : MonoBehaviour
         {
             anime.setAcive(false);
         }
-        gameObject.transform.rotation = Quaternion.Euler(0, 0, dgree);
+        //gameObject.transform.rotation = Quaternion.Euler(0, 0, dgree);
     }
 
     public void onHint()
