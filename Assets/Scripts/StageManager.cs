@@ -128,7 +128,7 @@ public class StageManager : MonoBehaviour
 
         if(useHint)
         {
-
+            Debug.Log("hintanim");
             FindObjectOfType<Hint>().GetComponent<Hint>().onHint();
         }
     }
@@ -146,6 +146,7 @@ public class StageManager : MonoBehaviour
         {
             audioSource.PlayOneShot(HintSound);
             useHint = true;
+            Debug.Log("hintanim");
         }
     }
     private void startAnime()
@@ -153,7 +154,7 @@ public class StageManager : MonoBehaviour
 
         TitleText.DOFade(1.0f, 1.3f).SetEase(Ease.InOutQuint).SetLoops(2, LoopType.Yoyo);
         SubTitleText.DOFade(1.0f, 1.3f).SetEase(Ease.InOutQuint).SetLoops(2, LoopType.Yoyo);
-        whitePaper.GetComponent<RawImage>().DOFade(0.2f, 1.3f).SetEase(Ease.InOutQuint).SetLoops(2, LoopType.Yoyo);
+        whitePaper.GetComponent<RawImage>().DOFade(0.15f, 1.3f).SetEase(Ease.InOutQuint).SetLoops(2, LoopType.Yoyo);
 
 
         if (PlayerCs != null) PlayerCs.titleCallPowerWait();
@@ -184,10 +185,14 @@ public class StageManager : MonoBehaviour
 
     IEnumerator SceneChange()
     {
-        if(PlayerPrefs.GetInt("stageNum") <= nowStageNum)
+        //ステージが40以上なら、↓の数字を変える。最大ステージ番号にする
+        if(nowStageNum != 40)
         {
-            PlayerPrefs.SetInt("stageNum", nowStageNum + 1);
-            PlayerPrefs.Save();
+            if (PlayerPrefs.GetInt("stageNum") <= nowStageNum)
+            {
+                PlayerPrefs.SetInt("stageNum", nowStageNum + 1);
+                PlayerPrefs.Save();
+            }
         }
         yield return new WaitForSeconds(2f);
 

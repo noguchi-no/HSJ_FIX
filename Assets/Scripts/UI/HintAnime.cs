@@ -21,9 +21,10 @@ public class HintAnime : MonoBehaviour
   
     IEnumerator anime4()
     {
-        
+        Debug.Log("hintanim");
         while (true)
         {
+            //Debug.Log("hintanim");
             if (isAnime)
             {
                 for (int i = 1; i <= 6; i++)
