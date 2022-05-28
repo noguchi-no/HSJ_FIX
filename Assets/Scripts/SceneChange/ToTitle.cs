@@ -9,6 +9,7 @@ public class ToTitle : MonoBehaviour
     public void OnClick ()
     {
         StageManager.useHint = false;
+        StageManager.isStartAnime = false;
         if (SceneManager.GetActiveScene().name == "StageChoice")
         {
             FadeManager.Instance.LoadScene ("Title", 0.3f);

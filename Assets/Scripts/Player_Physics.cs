@@ -40,6 +40,7 @@ public class Player_Physics : MonoBehaviour
     private bool Player2p = false;
     private GameObject Player2;
     private GameObject lastBoundObject = null;
+    public bool isCheck = true;
 
     void Start()
     {
@@ -235,8 +236,9 @@ public class Player_Physics : MonoBehaviour
     {
         while (true)
         {
+            if (!isCheck) break;
             var tempPos = transform.position;
-            yield return new WaitForSeconds(1f);
+            yield return new WaitForSeconds(0.5f);
             var dis = Vector3.Distance(transform.position, tempPos);
             //Debug.Log(dis);
             if (dis <= 0.1f)
@@ -245,30 +247,16 @@ public class Player_Physics : MonoBehaviour
                 {
 
                     var tempPos2 = Player2.transform.position;
-                    yield return new WaitForSeconds(1f);
+                    yield return new WaitForSeconds(0.5f);
                     var dis2 = Vector3.Distance(Player2.transform.position, tempPos2); if (dis <= 0.1f)
                         if (dis2 <= 0.1f)
                         {
                             yield return new WaitForSeconds(1f);
-                            switch (Se.type)
+                            if(!isEnd)
                             {
-                                case SystemAudioManager.SEtype.metal:
-                                    PlayBoundSe(AudioType.MDead);
-                                    break;
-                                case SystemAudioManager.SEtype.fantasy:
-                                    PlayBoundSe(AudioType.FDead);
-                                    break;
-                                case SystemAudioManager.SEtype.wood:
-                                    PlayBoundSe(AudioType.WDead);
-                                    break;
-                                case SystemAudioManager.SEtype.cyber:
-                                    PlayBoundSe(AudioType.SDead);
-                                    break;
-                                case SystemAudioManager.SEtype.normal:
-                                    PlayBoundSe(AudioType.Dead);
-                                    break;
+                                PlayBoundSe(AudioType.WDead);
+                                isEnd = true;
                             }
-
 
                             var effect = Instantiate(BreakEffect, transform);
                             effect.transform.parent = null;
@@ -279,25 +267,12 @@ public class Player_Physics : MonoBehaviour
                 else
                 {
                     yield return new WaitForSeconds(1f);
-                    switch (Se.type)
-                    {
-                        case SystemAudioManager.SEtype.metal:
-                            PlayBoundSe(AudioType.MDead);
-                            break;
-                        case SystemAudioManager.SEtype.fantasy:
-                            PlayBoundSe(AudioType.FDead);
-                            break;
-                        case SystemAudioManager.SEtype.wood:
-                            PlayBoundSe(AudioType.WDead);
-                            break;
-                        case SystemAudioManager.SEtype.cyber:
-                            PlayBoundSe(AudioType.SDead);
-                            break;
-                        case SystemAudioManager.SEtype.normal:
-                            PlayBoundSe(AudioType.Dead);
-                            break;
-                    }
 
+                    if (!isEnd)
+                    {
+                        PlayBoundSe(AudioType.WDead);
+                        isEnd = true;
+                    }
 
                     var effect = Instantiate(BreakEffect, transform);
                     effect.transform.parent = null;
