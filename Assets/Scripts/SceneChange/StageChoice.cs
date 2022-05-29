@@ -22,6 +22,8 @@ public class StageChoice : MonoBehaviour
 
         stageNum = PlayerPrefs.GetInt("stageNum", 1);
 
+        panelRectTransform.DOLocalMoveX(0f, 1f).SetEase(easeType);
+
         for (int i = 0; i < stageNum; i++)
         {
             //半透明にしておいたボタンのアルファを最大まであげる
@@ -29,7 +31,6 @@ public class StageChoice : MonoBehaviour
             stageButtons[i].interactable = true;
         }
 
-        panelRectTransform.DOLocalMoveX(0f, 1f).SetEase(easeType);
     }
     private void CantTapButton()
     {
