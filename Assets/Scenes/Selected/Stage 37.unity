@@ -858,9 +858,25 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1988412998, guid: 6c2aee5e0d3989b44b63c6dcf0828d2c, type: 3}
+      propertyPath: m_Volume
+      value: 0.15
+      objectReference: {fileID: 0}
     - target: {fileID: 3345948159606948536, guid: 6c2aee5e0d3989b44b63c6dcf0828d2c, type: 3}
       propertyPath: m_Name
       value: windField
+      objectReference: {fileID: 0}
+    - target: {fileID: 3345948159606948537, guid: 6c2aee5e0d3989b44b63c6dcf0828d2c, type: 3}
+      propertyPath: m_Color.b
+      value: 0.79607844
+      objectReference: {fileID: 0}
+    - target: {fileID: 3345948159606948537, guid: 6c2aee5e0d3989b44b63c6dcf0828d2c, type: 3}
+      propertyPath: m_Color.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3345948159606948537, guid: 6c2aee5e0d3989b44b63c6dcf0828d2c, type: 3}
+      propertyPath: m_Color.r
+      value: 0.29803923
       objectReference: {fileID: 0}
     - target: {fileID: 3345948159606948538, guid: 6c2aee5e0d3989b44b63c6dcf0828d2c, type: 3}
       propertyPath: m_RootOrder
@@ -1621,7 +1637,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_Sprite: {fileID: -2413806693520163455, guid: ebe73ca9363db456bacf42c025bb4847, type: 3}
-  m_Color: {r: 0.62352943, g: 0.62352943, b: 0.62352943, a: 1}
+  m_Color: {r: 1, g: 0.7529412, b: 0.2509804, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
