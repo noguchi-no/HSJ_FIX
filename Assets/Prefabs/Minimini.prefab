@@ -76,6 +76,18 @@ PrefabInstance:
       propertyPath: rightArrow
       value: 
       objectReference: {fileID: 0}
+    - target: {fileID: 1939011816242999887, guid: fab5a0acc7097458a8f31059df2fb131, type: 3}
+      propertyPath: m_Color.b
+      value: 0.21226418
+      objectReference: {fileID: 0}
+    - target: {fileID: 1939011816242999887, guid: fab5a0acc7097458a8f31059df2fb131, type: 3}
+      propertyPath: m_Color.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1939011816242999887, guid: fab5a0acc7097458a8f31059df2fb131, type: 3}
+      propertyPath: m_Color.r
+      value: 0.9536626
+      objectReference: {fileID: 0}
     - target: {fileID: 1939011816242999888, guid: fab5a0acc7097458a8f31059df2fb131, type: 3}
       propertyPath: m_RootOrder
       value: 0
