@@ -163,7 +163,6 @@ public class Player_Physics : MonoBehaviour
         //{
         if (isShot)
         {
-            Debug.Log(coll.gameObject);
 
             if (!end1st)
             {
@@ -241,6 +240,7 @@ public class Player_Physics : MonoBehaviour
             yield return new WaitForSeconds(0.5f);
             var dis = Vector3.Distance(transform.position, tempPos);
             //Debug.Log(dis);
+
             if (dis <= 0.1f)
             {
                 if (Player2p)
@@ -258,8 +258,11 @@ public class Player_Physics : MonoBehaviour
                                 isEnd = true;
                             }
 
-                            var effect = Instantiate(BreakEffect, transform);
-                            effect.transform.parent = null;
+                            if (isCheck)
+                            {
+                                var effect = Instantiate(BreakEffect, transform);
+                                effect.transform.parent = null;
+                            }
                             yield return new WaitForSeconds(0.5f);
                             SceneManager.LoadScene(SceneManager.GetActiveScene().name);
                         }
@@ -274,8 +277,11 @@ public class Player_Physics : MonoBehaviour
                         isEnd = true;
                     }
 
-                    var effect = Instantiate(BreakEffect, transform);
-                    effect.transform.parent = null;
+                    if (isCheck)
+                    {
+                        var effect = Instantiate(BreakEffect, transform);
+                        effect.transform.parent = null;
+                    }
                     yield return new WaitForSeconds(0.5f);
                     SceneManager.LoadScene(SceneManager.GetActiveScene().name);
                 }
