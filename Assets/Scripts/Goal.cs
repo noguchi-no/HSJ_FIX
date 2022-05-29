@@ -35,8 +35,9 @@ public class Goal : MonoBehaviour
 
             var physicsObj =  GameObject.FindObjectOfType<Player_Physics>();
             physicsObject = physicsObj.gameObject;
-            if (physicsObj != null && PlayerObj.TryGetComponent(out Player_Physics Physics))
+            if (physicsObj != null && physicsObj.TryGetComponent(out Player_Physics Physics))
             {
+                Debug.Log("physicsObj:"+physicsObj);
                 Physics.isCheck = false;
             }
 
@@ -51,9 +52,7 @@ public class Goal : MonoBehaviour
 
     private IEnumerator Goalanimation(GameObject targetPbPnject)
     {
-        Debug.Log("goalAnime");
         var dis = Vector3.Distance(targetPbPnject.transform.position, transform.position);
-        Debug.Log("distance = "+dis);
         var PlayerPos = (targetPbPnject.transform.position - transform.position).normalized;
         if(mini)
         {
@@ -71,7 +70,6 @@ public class Goal : MonoBehaviour
             float temp = 1f * i * 4 / 360;
             //PlayerObj.transform.localScale = new Vector3(0.3f, 0.3f, 0.3f) * (1f - 1f* i / 90);
             var GoalPlayerPos = new Vector3(PlayerPos.x * dis * (1f - temp) * Mathf.Sin(temp * 15), PlayerPos.x * dis * (1f - temp) * Mathf.Cos(temp * 15), 0) + transform.position;
-            Debug.Log(Mathf.Sin(i * 4 / 360));
             targetPbPnject.transform.position = GoalPlayerPos;
             yield return new WaitForFixedUpdate();
         }

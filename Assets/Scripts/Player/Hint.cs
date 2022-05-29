@@ -102,7 +102,7 @@ public class Hint : MonoBehaviour
                 gameObject.transform.rotation = Quaternion.Euler(0, 0, 190);
                 break;
             case StageManager.Stage.stage24:
-                gameObject.transform.rotation = Quaternion.Euler(0, 0, 245);
+                gameObject.transform.rotation = Quaternion.Euler(0, 0, 64.579f + 180.0f);
                 break;
             case StageManager.Stage.stage25:
                 gameObject.transform.rotation = Quaternion.Euler(0, 0, 264);
@@ -126,13 +126,18 @@ public class Hint : MonoBehaviour
                 gameObject.transform.rotation = Quaternion.Euler(0, 0, 250);
                 break;
             case StageManager.Stage.stage32:
-                gameObject.transform.rotation = Quaternion.Euler(0, 0, 260);
+                gameObject.transform.rotation = Quaternion.Euler(0, 0, 180.0f + 20.225f);
                 break;
             case StageManager.Stage.stage33:
                 gameObject.transform.rotation = Quaternion.Euler(0, 0, 190);
                 break;
             case StageManager.Stage.stage34:
+<<<<<<< HEAD
                 gameObject.transform.rotation = Quaternion.Euler(0, 0, 82.449f + 180.0f);
+=======
+                gameObject.transform.rotation = Quaternion.Euler(0, 0, -82.317f + 180.0f);                
+
+>>>>>>> 3a498ce8771db7d248b566c1212c968ededf8d0b
                 break;
             case StageManager.Stage.stage35:
                 gameObject.transform.rotation = Quaternion.Euler(0, 0, 283);

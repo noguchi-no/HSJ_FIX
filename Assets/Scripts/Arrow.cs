@@ -19,7 +19,6 @@ public class Arrow : MonoBehaviour
     {
         float power = player_Physics.shotPower / 100.0f;
 
-        Debug.Log(power);
         /*
         if (player_Physics.power > 500)
         {
