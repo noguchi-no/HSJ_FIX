@@ -166,17 +166,17 @@ public class StageManager : MonoBehaviour
     public void stageClear()
     {
         playNum = 0;
-        if (useHint)
-        {
-            StageClearText2.SetActive(true);
-            PlayerPrefs.SetInt(nowStage.ToString(), 1);
-        }
-        else if (!useHint)
+        if (!useHint)
         {
             PlayerPrefs.SetInt(nowStage.ToString(), 2);
             StageClearText1.SetActive(true);
             audioSource.PlayOneShot(clearNoHintSound);
             useHint = false;
+        }
+        else if (useHint)
+        {
+            StageClearText2.SetActive(true);
+            PlayerPrefs.SetInt(nowStage.ToString(), 1);
         }
         isStartAnime = false;
         PlayerPrefs.Save();

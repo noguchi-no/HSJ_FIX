@@ -11,6 +11,7 @@ public class Goal : MonoBehaviour
     StageManager StageManager;
     private GameObject GoalCircle;
     private GameObject PlayerObj;
+    private GameObject physicsObject;
     [SerializeField]
     private bool mini;
     
@@ -31,12 +32,15 @@ public class Goal : MonoBehaviour
             PlayerObj.GetComponent<Rigidbody2D>().velocity = Vector2.zero;
             PlayerObj.GetComponent<Rigidbody2D>().simulated = false;
             PlayerObj.GetComponent<CircleCollider2D>().enabled = false;
-            if (PlayerObj.TryGetComponent(out Player_Physics Physics))
+
+            var physicsObj =  GameObject.FindObjectOfType<Player_Physics>();
+            physicsObject = physicsObj.gameObject;
+            if (physicsObj != null && PlayerObj.TryGetComponent(out Player_Physics Physics))
             {
                 Physics.isCheck = false;
             }
 
-            StartCoroutine(Goalanimation());
+            StartCoroutine(Goalanimation(PlayerObj));
         }
     }
 
@@ -45,38 +49,41 @@ public class Goal : MonoBehaviour
         if (Se != null) Se.ShotSe(type);
     }
 
-    private IEnumerator Goalanimation()
+    private IEnumerator Goalanimation(GameObject targetPbPnject)
     {
         Debug.Log("goalAnime");
-        var dis = Vector3.Distance(PlayerObj.transform.position, transform.position);
+        var dis = Vector3.Distance(targetPbPnject.transform.position, transform.position);
         Debug.Log("distance = "+dis);
-        var PlayerPos = (PlayerObj.transform.position - transform.position).normalized;
+        var PlayerPos = (targetPbPnject.transform.position - transform.position).normalized;
         if(mini)
         {
-            PlayerObj.transform.localScale = new Vector3(0.2f, 0.2f, 0.2f);
-            PlayerObj.transform.DOScale(new Vector3(0.1f, 0.1f, 0.1f), 2f);
+            targetPbPnject.transform.localScale = new Vector3(0.2f, 0.2f, 0.2f);
+            targetPbPnject.transform.DOScale(new Vector3(0.1f, 0.1f, 0.1f), 2f);
         }
         else
         {
-            PlayerObj.transform.localScale = new Vector3(0.35f, 0.35f, 0.35f);
-            PlayerObj.transform.DOScale(new Vector3(0.15f, 0.15f, 0.15f), 2f);
+            targetPbPnject.transform.localScale = new Vector3(0.35f, 0.35f, 0.35f);
+            targetPbPnject.transform.DOScale(new Vector3(0.15f, 0.15f, 0.15f), 2f);
         }
-        PlayerObj.transform.DOScale(new Vector3(0.15f, 0.15f, 0.15f), 2f);
+        targetPbPnject.transform.DOScale(new Vector3(0.15f, 0.15f, 0.15f), 2f);
         for (int i = 0; i < 90; i++)
         {
             float temp = 1f * i * 4 / 360;
             //PlayerObj.transform.localScale = new Vector3(0.3f, 0.3f, 0.3f) * (1f - 1f* i / 90);
             var GoalPlayerPos = new Vector3(PlayerPos.x * dis * (1f - temp) * Mathf.Sin(temp * 15), PlayerPos.x * dis * (1f - temp) * Mathf.Cos(temp * 15), 0) + transform.position;
             Debug.Log(Mathf.Sin(i * 4 / 360));
-            PlayerObj.transform.position = GoalPlayerPos;
+            targetPbPnject.transform.position = GoalPlayerPos;
             yield return new WaitForFixedUpdate();
         }
-        var color = PlayerObj.GetComponent<SpriteRenderer>();
+        var color = targetPbPnject.GetComponent<SpriteRenderer>();
         color.color = new Color(0, 0, 0, 0);
         Destroy(this.gameObject);
         StageManager.stageClear();
+        
+        var colorS = physicsObject.GetComponent<SpriteRenderer>();
+        colorS.color = new Color(0, 0, 0, 0);
 
-        if(StageManager.useHint)
+        if (StageManager.useHint)
         {
             switch (Se.type)
             {
