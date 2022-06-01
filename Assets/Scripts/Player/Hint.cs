@@ -102,7 +102,7 @@ public class Hint : MonoBehaviour
                 gameObject.transform.rotation = Quaternion.Euler(0, 0, 190);
                 break;
             case StageManager.Stage.stage24:
-                gameObject.transform.rotation = Quaternion.Euler(0, 0, 64.579f + 180.0f);
+                gameObject.transform.rotation = Quaternion.Euler(0, 0, 62.579f + 180.0f);
                 break;
             case StageManager.Stage.stage25:
                 gameObject.transform.rotation = Quaternion.Euler(0, 0, 264);
