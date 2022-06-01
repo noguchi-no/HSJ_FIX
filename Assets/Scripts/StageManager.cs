@@ -104,11 +104,13 @@ public class StageManager : MonoBehaviour
         Player = GameObject.Find("Player");
         whitePaper = GameObject.FindGameObjectWithTag("white");
 
-        if(!isStartAnime)
+        if (!isStartAnime)
         {
             isStartAnime = true;
             startAnime();
-        } else {
+        }
+        else
+        {
             whitePaper.SetActive(false);
         }
         var hint = GameObject.Find("HintButton");
@@ -124,11 +126,11 @@ public class StageManager : MonoBehaviour
         fade = hintButton.DOFade(0.0f, 1f).SetEase(Ease.InCubic).SetLoops(-1, LoopType.Yoyo);
         if (useHint) stopFade();
 
-        if(resetClear) PlayerPrefs.SetInt("stageNum", 1);
+        if (resetClear) PlayerPrefs.SetInt("stageNum", 1);
 
-        if(useHint)
+        if (useHint)
         {
-            Debug.Log("hintanim");
+            hintObject.GetComponent<Button>().interactable = false;
             FindObjectOfType<Hint>().GetComponent<Hint>().onHint();
         }
     }
@@ -147,6 +149,8 @@ public class StageManager : MonoBehaviour
             audioSource.PlayOneShot(HintSound);
             useHint = true;
             Debug.Log("hintanim");
+            FindObjectOfType<Hint>().GetComponent<Hint>().onHint();
+            hintObject.GetComponent<Button>().interactable = false;
         }
     }
     private void startAnime()

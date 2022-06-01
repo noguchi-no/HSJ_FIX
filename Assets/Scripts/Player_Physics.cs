@@ -115,24 +115,7 @@ public class Player_Physics : MonoBehaviour
 
                     rb.AddForce(nextVector);
 
-                    switch (Se.type)
-                    {
-                        case SystemAudioManager.SEtype.metal:
-                            PlayBoundSe(AudioType.MBound);
-                            break;
-                        case SystemAudioManager.SEtype.fantasy:
-                            PlayBoundSe(AudioType.FBound1);
-                            break;
-                        case SystemAudioManager.SEtype.wood:
-                            PlayBoundSe(AudioType.WBound1);
-                            break;
-                        case SystemAudioManager.SEtype.cyber:
-                            PlayBoundSe(AudioType.SBound1);
-                            break;
-                        case SystemAudioManager.SEtype.normal:
-                            PlayBoundSe(AudioType.Bound);
-                            break;
-                    }
+                    PlayBoundSe(AudioType.WBound1);
                 }
             }
 
@@ -173,25 +156,7 @@ public class Player_Physics : MonoBehaviour
                 var effect = Instantiate(BoundEffect, transform);
                 effect.transform.parent = null;
 
-                switch (Se.type)
-                {
-                    case SystemAudioManager.SEtype.metal:
-                        PlayBoundSe(AudioType.MBound);
-                        break;
-                    case SystemAudioManager.SEtype.fantasy:
-                        PlayBoundSe(AudioType.FBound2);
-                        break;
-                    case SystemAudioManager.SEtype.wood:
-                        PlayBoundSe(AudioType.WBound2);
-                        break;
-                    case SystemAudioManager.SEtype.cyber:
-                        PlayBoundSe(AudioType.SBound2);
-                        break;
-                    case SystemAudioManager.SEtype.normal:
-                        PlayBoundSe(AudioType.Bound);
-                        break;
-                }
-
+                PlayBoundSe(AudioType.WBound2);
             }
             else if (!end2nd)
             {
@@ -200,24 +165,7 @@ public class Player_Physics : MonoBehaviour
                 StartCoroutine(checkPos());
                 if (lastBoundObject != coll.gameObject)
                 {
-                    switch (Se.type)
-                    {
-                        case SystemAudioManager.SEtype.metal:
-                            PlayBoundSe(AudioType.MBound);
-                            break;
-                        case SystemAudioManager.SEtype.fantasy:
-                            PlayBoundSe(AudioType.FBound2);
-                            break;
-                        case SystemAudioManager.SEtype.wood:
-                            PlayBoundSe(AudioType.WBound3);
-                            break;
-                        case SystemAudioManager.SEtype.cyber:
-                            PlayBoundSe(AudioType.SBound3);
-                            break;
-                        case SystemAudioManager.SEtype.normal:
-                            PlayBoundSe(AudioType.Bound);
-                            break;
-                    }
+                    PlayBoundSe(AudioType.WBound3);
                     var effect = Instantiate(BoundEffect, transform);
                     effect.transform.parent = null;
                 }
