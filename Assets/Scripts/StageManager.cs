@@ -81,6 +81,10 @@ public class StageManager : MonoBehaviour
     AudioSource audioSource;
     [SerializeField]
     private bool resetClear = false;
+    [SerializeField]
+    private Image Frame;
+    [SerializeField]
+    private Image Icon;
 
     private GameObject whitePaper;
 
@@ -130,8 +134,10 @@ public class StageManager : MonoBehaviour
 
         if (useHint)
         {
-            hintObject.GetComponent<Button>().interactable = false;
             FindObjectOfType<Hint>().GetComponent<Hint>().onHint();
+            hintObject.GetComponent<Button>().interactable = false;
+            Frame.DOFade(0.2f, 0.8f).SetEase(Ease.InOutQuint);
+            Icon.DOFade(0.2f, 0.8f).SetEase(Ease.InOutQuint);
         }
     }
     private void FixedUpdate()
@@ -151,6 +157,10 @@ public class StageManager : MonoBehaviour
             Debug.Log("hintanim");
             FindObjectOfType<Hint>().GetComponent<Hint>().onHint();
             hintObject.GetComponent<Button>().interactable = false;
+            Frame.DOFade(0.2f, 0.8f).SetEase(Ease.InOutQuint);
+            Icon.DOFade(0.2f, 0.8f).SetEase(Ease.InOutQuint);
+
+
         }
     }
     private void startAnime()
