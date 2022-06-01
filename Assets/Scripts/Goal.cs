@@ -83,24 +83,7 @@ public class Goal : MonoBehaviour
 
         if (StageManager.useHint)
         {
-            switch (Se.type)
-            {
-            case SystemAudioManager.SEtype.metal:
-                PlayBoundSe(AudioType.MGoal);
-                break;
-            case SystemAudioManager.SEtype.fantasy:
-                PlayBoundSe(AudioType.FGoal);
-                break;
-            case SystemAudioManager.SEtype.wood:
-                PlayBoundSe(AudioType.WGoal);
-                break;
-            case SystemAudioManager.SEtype.cyber:
-                PlayBoundSe(AudioType.SGoal);
-                break;
-            case SystemAudioManager.SEtype.normal:
-                PlayBoundSe(AudioType.Goal);
-                break;
-            }
+            PlayBoundSe(AudioType.WGoal);
             StageManager.useHint = false;
         }
 
